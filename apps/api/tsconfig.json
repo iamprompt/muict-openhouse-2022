@@ -5,8 +5,9 @@
     "module": "ESNext",
     "outDir": "./dist",
     "rootDir": "./src",
-    "declaration": true,
-    "strict": false
+    "declaration": false,
+    "declarationMap": false,
+    "strict": true
   },
   "exclude": ["node_modules"],
   "extends": "tsconfig/base.json",
