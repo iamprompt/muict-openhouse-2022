@@ -1,7 +1,10 @@
 import express, { json, urlencoded } from 'express'
 import cors from 'cors'
 import morgan from 'morgan'
+
+// Import Routes
 import { webhookRouter } from './routes/webhook'
+import { statsRouter } from './routes/stats'
 
 const createServer = () => {
   const app = express()
@@ -14,6 +17,7 @@ const createServer = () => {
   app.use(cors())
 
   app.use('/webhook', webhookRouter)
+  app.use('/stats', statsRouter)
 
   return app
 }
