@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "ESNext",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "strict": false
+  },
+  "exclude": ["node_modules"],
+  "extends": "tsconfig/base.json",
+  "include": ["src"]
+}
