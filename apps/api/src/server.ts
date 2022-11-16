@@ -5,6 +5,7 @@ import morgan from 'morgan'
 // Import Routes
 import { webhookRouter } from './routes/webhook'
 import { statsRouter } from './routes/stats'
+import { usersRouter } from './routes/users'
 
 const createServer = () => {
   const app = express()
@@ -18,6 +19,7 @@ const createServer = () => {
 
   app.use('/webhook', webhookRouter)
   app.use('/stats', statsRouter)
+  app.use('/users', usersRouter)
 
   return app
 }
