@@ -25,14 +25,16 @@ router.get('/isEligible', async (req, res) => {
     const eligibleForReward = await getRewardEligibility(questStatus)
     const isClaimed = await isRewardClaimed(userRecord.id)
 
+    console.log(questStatus, eligibleForReward, isClaimed)
+
     res.status(200).json({
       success: true,
       payload: {
         name: `${userRecord.firstName} ${userRecord.lastName}`,
         language: userRecord.language,
         profileImage: userRecord.linePicture,
-        isRewardEligible: eligibleForReward,
-        isRewardClaimed: isClaimed,
+        isEligible: eligibleForReward,
+        isClaimed: isClaimed,
         quests: questStatus,
       },
     })

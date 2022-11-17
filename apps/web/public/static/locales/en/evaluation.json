@@ -1,0 +1,135 @@
+{
+  "EVALUATION_TITLE": "Evaluation Form",
+  "EVALUATION_DESCRIPTION": "This Evaluation Form has 3 sections. Please fill the answer in all sections for the evaluation of this activity.",
+  "START_EVAL_BUTTON": "Start Evaluation",
+  "SECTION_TITLE_TEMPLATE": "Section {}",
+  "RATING_OPTIONS": {
+    "STRONGLY_AGREE": "Strongly Agree",
+    "AGREE": "Agree",
+    "NEUTRAL": "Neutral",
+    "DISAGREE": "Disagree",
+    "STRONGLY_DISAGREE": "Strongly Disagree",
+    "NOT_APPLICABLE": "N/A"
+  },
+  "SECTION_1": {
+    "TITLE": "General Information",
+    "ROLE": {
+      "QUESTION": "Role",
+      "OPTIONS": {
+        "HIGH_SCHOOL_STUDENT": "High School Student",
+        "UNIVERSITY_STUDENT": "University Student",
+        "TEACHER": "Teacher / Instructor",
+        "PARENTS": "Parents",
+        "STAFF": "Staff / Instructor of Mahidol University",
+        "OTHERS": "Others"
+      }
+    },
+    "GENDER": {
+      "QUESTION": "Gender",
+      "OPTIONS": {
+        "MALE": "Male",
+        "FEMALE": "Female",
+        "OTHERS": "Others"
+      }
+    },
+    "CHANNELS": {
+      "QUESTION": "How did you know about this event?",
+      "OPTIONS": {
+        "MUICT_OP_FACEBOOK": "MUICT Open House Facebook Page",
+        "PR_VIDEOS": "PR Videos",
+        "ICT_WEBSITE": "ICT website",
+        "UNIVERSITY_WEBSITE": "University's website",
+        "EDUCATIONAL_WEBSITE": "Educational websites (dek-d.com, camphub.in.th, etc.)",
+        "SOCIAL_MEDIA": "Social Media (Facebook, Twitter, Instagram, etc.)",
+        "LEAFLET": "Leaflet",
+        "POSTER": "Poster",
+        "FRIENDS": "Friends",
+        "UNIVERSITY_PR": "PR from the university",
+        "INVITATION_LETTER": "Invitation Letter",
+        "OTHERS": "Others"
+      }
+    },
+    "PARTICIPATED_ACTIVITIES": {
+      "QUESTION": "Types of activity that you had participated",
+      "OPTIONS": {
+        "GUIDANCE": "Guidance",
+        "ACTIVITY_BOOTHS": "Activity booths",
+        "ON_STAGE_PERFORMANCES": "On-stage Performances",
+        "STUDENT_PROJECTS": "Student projects exhibition",
+        "INTERNATIONAL_EXPERIENCE_SHARING": "International experience sharing"
+      }
+    }
+  },
+  "SECTION_2": {
+    "TITLE": "Satisfaction",
+    "GROUP_SERVICE_LOCATION_DATE_TIME_TITLE": "Service, Location, Date and Time",
+    "DATE_AND_TIME_RATING": {
+      "QUESTION": "Appropriate choice of activities' date and time."
+    },
+    "LOCATION_RATING": {
+      "QUESTION": "Appropriate choice of location for the activities."
+    },
+    "SERVICE_RATING": {
+      "QUESTION": "Service and convenience provided by ICT students."
+    },
+    "GROUP_FORMAT_BENEFIT_OVERALL_TITLE": "Format, Benefit, and Overall",
+    "UNDERSTANDING_RATING": {
+      "QUESTION": "Participants understand ICT academic programs."
+    },
+    "STAGE_RATING": {
+      "QUESTION": "Participants gained knowledge and entertainment from stage activities and performance show."
+    },
+    "BOOTH_RATING": {
+      "QUESTION": "Participants gained knowledge and got to know seniors from students' activity booths."
+    },
+    "PROJECT_EXHIBITION_RATING": {
+      "QUESTION": "Level of knowledge and inspiration you have received from the previous work of seniors and alumni."
+    },
+    "GUIDANCE_RATING": {
+      "QUESTION": "Participants gained basic knowledge of ICT from the guidance activities."
+    },
+    "INTL_EXPERIENCE_SHARING_RATING": {
+      "QUESTION": "Participants gained knowledge from the international experience sharing session."
+    },
+    "BENEFIT_RATING": {
+      "QUESTION": "Level of benefit and knowledge you have received from your visiting."
+    },
+    "OVERALL_RATING": {
+      "QUESTION": "Overall satisfaction of the activity."
+    },
+    "INTEREST_RATING": {
+      "QUESTION": "Being encouraged and interested in applying for the Faculty of ICT or would like to help promote the Faculty of ICT after entering the MUICT Open House 2022 event."
+    }
+  },
+  "SECTION_3": {
+    "TITLE": "Others",
+    "INTERESTED_PROGRAMS": {
+      "QUESTION": "What are the top 3 programs, faculties, and universities you are interested in? (Rank 1 is the most interested one)",
+      "SUB_ANSWERS_TITLE": "Rank {}:"
+    },
+    "FACTORS": {
+      "QUESTION": "What are the top 3 factors that you consider when selecting the program to apply for? (Rank 1 is the most important one)",
+      "SUB_ANSWERS_TITLE": "Rank {}:"
+    },
+    "IMPRESSED": {
+      "QUESTION": "What are things that you liked or impressed from participating in this event?"
+    },
+    "UNIMPRESSED": {
+      "QUESTION": "What are things that you disliked or unimpressed from participating in this event?"
+    },
+    "OTHER_SUGGESTIONS": {
+      "QUESTION": "Other suggestions"
+    }
+  },
+  "EVALUATION_SUCCESS": {
+    "TITLE": "Thank you",
+    "MESSAGE": "for your visit!"
+  },
+  "BUTTON_LABEL": {
+    "SUBMIT": "Submit",
+    "NEXT": "Next",
+    "BACK": "Back",
+    "CANCEL": "Cancel",
+    "CLOSE": "Close"
+  }
+}

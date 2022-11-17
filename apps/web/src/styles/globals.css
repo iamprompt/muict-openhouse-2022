@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Sarabun:wght@400;700&family=IBM+Plex+Sans+Thai:wght@400;700&display=swap');
+@import './fonts.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    @apply bg-op-oxford-blue text-white;
+  }
+
+  body {
+    @apply h-screen w-full bg-base-overlay bg-center bg-cover bg-no-repeat;
+  }
+}

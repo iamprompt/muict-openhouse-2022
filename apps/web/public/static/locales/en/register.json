@@ -1,0 +1,53 @@
+{
+  "TYPE_SELECTION": {
+    "REG_TYPE_SELECTION_TITLE": "Who are you?",
+    "REG_TYPE_STUDENT": "Student",
+    "REG_TYPE_UNI_STUDENT": "University Student",
+    "REG_TYPE_TEACHER": "Teacher",
+    "REG_TYPE_PARENTS": "Parents",
+    "REG_TYPE_MU_STAFF": "MU Staff",
+    "REG_TYPE_EXTERNAL": "Other"
+  },
+  "REG_FORM": {
+    "REG_FORM_TITLE": "Register",
+    "REG_FORM_SUBTITLE": "Please fill in the form below to register",
+
+    "REG_SECTION_TEMPLATE": "Part {}: {}",
+    "REG_SECTION_BASIC_INFO": "Basic Information",
+    "REG_SECTION_ADDITIONAL": "Additional Information",
+
+    "REG_FIELD_FIRSTNAME": "First Name",
+    "REG_FIELD_LASTNAME": "Last Name",
+    "REG_FIELD_DOB": "Date of Birth",
+    "REG_FIELD_EMAIL": "Email",
+    "REG_FIELD_PHONE": "Phone Number",
+
+    "REG_FIELD_FIRSTNAME_PLACEHOLDER": "Star",
+    "REG_FIELD_LASTNAME_PLACEHOLDER": "Technology",
+    "REG_FIELD_EMAIL_PLACEHOLDER": "nongstar@gmail.com",
+    "REG_FIELD_PHONE_PLACEHOLDER": "0812345678",
+
+    "REG_FIELD_PROVINCE": "Current Resident Province",
+    "REG_FIELD_SCHOOL": "School / Institute / University",
+    "REG_FIELD_SCHOOL_LEVEL": "Current / Highest Level of Education",
+
+    "REG_FIELD_SCHOOL_PLACEHOLDER": "Star Technology School",
+
+    "REG_BUTTON_SUBMIT": "Register",
+    "REG_BUTTON_NEXT": "Next",
+    "REG_BUTTON_CLOSE": "Close",
+    "REG_BUTTON_ACCEPT": "Agree",
+
+    "REG_SUCCESS_TITLE": "Registered",
+    "REG_SUCCESS_SUBTITLE": "Let's Explore!!",
+
+    "POLICY": {
+      "TITLE": "Privacy Policy",
+      "CONTENT": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32."
+    }
+  },
+  "REGISTERED": {
+    "REG_EXISTED_TITLE": "Registered",
+    "REG_EXISTED_SUBTITLE": "Have fun exploring!!"
+  }
+}

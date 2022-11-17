@@ -1,0 +1,35 @@
+{
+  "QUEST_NUMBER_TITLE": "ภารกิจที่ {}",
+  "QUEST_QUESTION": {
+    "QUESTION_SECTION_TITLE": "คำถาม",
+    "ANSWER_SECTION_TITLE": "คำตอบ",
+    "SUBMIT_ANSWER_BUTTON": "ส่งคำตอบ"
+  },
+  "QUEST_RESULT": {
+    "CORRECT_TITLE": "ยินดีด้วย!!",
+    "CORRECT_SUBTITLE": "น้องผ่านภารกิจแล้ว",
+    "INCORRECT_TITLE": "คำตอบผิด!!",
+    "INCORRECT_SUBTITLE": "ไม่เป็นไรนะ พยายามหาเข้า",
+    "DONE_TITLE": "ขอโทษนะ_/\\_",
+    "DONE_SUBTITLE": "น้องผ่านภารกิจไปแล้ว",
+    "TRY_AGAIN_BUTTON": "ตอบอีกครั้ง"
+  },
+  "ACTIVITY_SUMMARY": {
+    "TITLE": "สมุดบันทึกของ",
+    "REWARD_BUTTON": "รับรางวัล",
+    "REWARD_CLAIMED_BUTTON": "รับรางวัลแล้ว"
+  },
+  "CLAIM_REWARD": {
+    "ELIGIBLE_TITLE": "เก่งมากเลย",
+    "ELIGIBLE_SUBTITLE": "นำหน้านี้ไปให้พี่ ๆ ด้านหน้าดู เพื่อรับรางวัล",
+    "NOT_ELIGIBLE_TITLE": "ยังทำภารกิจไม่ครบ",
+    "NOT_ELIGIBLE_SUBTITLE": "ย้อนไปทำภารกิจให้ครบก่อนนะ",
+    "CLAIMED_TITLE": "รับรางวัลไปแล้ว",
+    "CLAIMED_SUBTITLE": "น้องรับรางวัลไปแล้ว อย่าลืมมาเยี่ยมคณะ ICT อีกนะ!!",
+    "CLAIM_BUTTON": "รับรางวัล",
+    "CLAIMED_BUTTON": "รับรางวัลแล้ว",
+    "CONFIRM_DIALOG_TITLE": "ยืนยันการรับรางวัล",
+    "CONFIRM_DIALOG_MESSAGE": "ให้พี่ ๆ เป็นคนกดรับรางวัลให้น้องนะ ถ้ากดไปแล้ว ไม่สามารถยกเลิกได้",
+    "CONFIRM_DIALOG_CONFIRM_BUTTON": "รับรางวัล"
+  }
+}

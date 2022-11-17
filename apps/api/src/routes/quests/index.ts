@@ -16,6 +16,31 @@ router.get('/', (_req, res) => {
   })
 })
 
+router.get('/quest', async (req, res) => {
+  const queryValidator = z.object({
+    questNo: z.string(),
+    lang: z.literal('en').or(z.literal('th')).optional(),
+  })
+
+  const { questNo, lang = 'th' } = queryValidator.parse(req.query)
+
+  if (!questNo) {
+    return res.status(400).json({
+      message: 'Missing id',
+    })
+  }
+
+  const questions = await getQuestQuestion(Number(questNo), lang, false, false)
+
+  return res.status(200).json({
+    success: true,
+    payload: {
+      ...questions[0],
+      id: undefined,
+    },
+  })
+})
+
 router.get('/question', async (req, res) => {
   const { query } = req
 
@@ -33,6 +58,7 @@ router.get('/question', async (req, res) => {
   }
 
   const user = await getLineUserFromRequest(req)
+
   const userRecord = await getUserRecordFromLineUId(user.userId)
 
   if (!userRecord) {

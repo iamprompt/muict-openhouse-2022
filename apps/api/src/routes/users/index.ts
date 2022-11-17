@@ -1,6 +1,9 @@
 import { Request, Router } from 'express'
 import { Participant, ParticipantValidator } from '../../types/Participant'
 import { getAuthorizationToken } from '../../utils'
+import { getQuestStatus } from '../quests/helpers/getQuestStatus'
+import { getRewardEligibility } from '../rewards/helpers/getRewardEligibility'
+import { isRewardClaimed } from '../rewards/helpers/isRewardClaimed'
 import { getLineUserFromRequest } from './helpers/getLineUserFromRequest'
 import { getUserRecordFromLineUId } from './helpers/getUserRecordFromLineUId'
 import isParticipantRegistered from './helpers/isParticipantRegistered'
@@ -49,8 +52,8 @@ router.post('/register', async (req: Request<undefined, any, Participant>, res) 
 
 router.get('/isRegistered', async (req, res) => {
   try {
-    const { userId } = await getLineUserFromRequest(req)
-    const isRegistered = await isParticipantRegistered(userId)
+    const user = await getLineUserFromRequest(req)
+    const isRegistered = user ? await isParticipantRegistered(user?.userId) : false
 
     res.status(200).json({
       success: true,
@@ -77,10 +80,19 @@ router.get('/me', async (req, res) => {
       throw new Error('Participant not found')
     }
 
-    res.status(200).json({
+    const questStatus = await getQuestStatus(userRecord.id)
+    const eligibleForReward = await getRewardEligibility(questStatus)
+    const isClaimed = await isRewardClaimed(userRecord.id)
+
+    return res.status(200).json({
       success: true,
       payload: {
-        user: userRecord,
+        name: `${userRecord.firstName} ${userRecord.lastName}`,
+        language: userRecord.language,
+        profileImage: userRecord.linePicture,
+        isRewardEligible: eligibleForReward,
+        isRewardClaimed: isClaimed,
+        quests: questStatus,
       },
     })
   } catch (error) {

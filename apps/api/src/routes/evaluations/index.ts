@@ -13,7 +13,9 @@ router.get('/', (_req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const { data, token } = req.body
+    const token = getAuthorizationToken(req)
+
+    const data = req.body
 
     const p = await submitEvaluation(data, token)
 

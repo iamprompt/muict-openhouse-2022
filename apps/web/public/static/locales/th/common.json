@@ -1,0 +1,10 @@
+{
+  "LOADING_STATE_TITLE": "รออีกนิดเดียว…",
+  "LOADING_STATE_SUBTITLE": "การผจญภัยกำลังจะเริ่มแล้ว!",
+  "BUTTON_LABEL": {
+    "CLOSE": "ปิด",
+    "CANCEL": "ยกเลิก",
+    "BACK": "ก่อนหน้า",
+    "SUBMIT": "ส่ง"
+  }
+}

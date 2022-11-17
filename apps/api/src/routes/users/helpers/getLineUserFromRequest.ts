@@ -6,7 +6,8 @@ export const getLineUserFromRequest = async (req: Request) => {
   try {
     const token = getAuthorizationToken(req)
     if (!token) {
-      throw new Error('No LINE Id token provided')
+      // throw new Error('No LINE Id token provided')
+      return null
     }
 
     const user = await getLineUserFromIdToken(token)

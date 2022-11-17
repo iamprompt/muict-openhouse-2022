@@ -1,0 +1,35 @@
+{
+  "QUEST_NUMBER_TITLE": "Quest {}",
+  "QUEST_QUESTION": {
+    "QUESTION_SECTION_TITLE": "Question",
+    "ANSWER_SECTION_TITLE": "Answer",
+    "SUBMIT_ANSWER_BUTTON": "Submit"
+  },
+  "QUEST_RESULT": {
+    "CORRECT_TITLE": "Congratulations!!",
+    "CORRECT_SUBTITLE": "Let's continue explore!",
+    "INCORRECT_TITLE": "Wrong Answer!!",
+    "INCORRECT_SUBTITLE": "Let's try again!",
+    "DONE_TITLE": "Sorry!!_/\\_",
+    "DONE_SUBTITLE": "You've passed this quest!",
+    "TRY_AGAIN_BUTTON": "Try Again"
+  },
+  "ACTIVITY_SUMMARY": {
+    "TITLE": "Activity Passport",
+    "REWARD_BUTTON": "Claim Reward",
+    "REWARD_CLAIMED_BUTTON": "Reward Claimed"
+  },
+  "CLAIM_REWARD": {
+    "ELIGIBLE_TITLE": "Good Job!!",
+    "ELIGIBLE_SUBTITLE": "Show this screen to front desk to claim your reward!",
+    "NOT_ELIGIBLE_TITLE": "Not yet!!",
+    "NOT_ELIGIBLE_SUBTITLE": "Explore more quests to earn rewards!",
+    "CLAIMED_TITLE": "Already Claimed!!",
+    "CLAIMED_SUBTITLE": "You've already claimed this reward!",
+    "CLAIM_BUTTON": "Claim Reward",
+    "CLAIMED_BUTTON": "Claimed!!",
+    "CONFIRM_DIALOG_TITLE": "Confirm??",
+    "CONFIRM_DIALOG_MESSAGE": "Please show the staff this screen, and they will mark the reward as claimed.",
+    "CONFIRM_DIALOG_CONFIRM_BUTTON": "Mark as Claimed"
+  }
+}

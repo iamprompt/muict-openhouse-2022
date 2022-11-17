@@ -20,12 +20,12 @@ const createServer = () => {
   app.use(json())
   app.use(cors())
 
-  app.use('/webhook', webhookRouter)
-  app.use('/stats', statsRouter)
-  app.use('/users', usersRouter)
-  app.use('/evaluations', evaluationsRouter)
-  app.use('/rewards', rewardsRouter)
-  app.use('/quests', questsRouter)
+  app.use('/api/webhook', webhookRouter)
+  app.use('/api/stats', statsRouter)
+  app.use('/api/users', usersRouter)
+  app.use('/api/evaluations', evaluationsRouter)
+  app.use('/api/rewards', rewardsRouter)
+  app.use('/api/quests', questsRouter)
 
   return app
 }
