@@ -18,6 +18,10 @@ RUN pnpm install --filter=web
 
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
+
+ARG NEXT_PUBLIC_API_BASE_URL
+ENV NEXT_PUBLIC_API_BASE_URL=$NEXT_PUBLIC_API_BASE_URL
+
 RUN turbo run build --filter=web
 RUN pnpm prune --prod
 
