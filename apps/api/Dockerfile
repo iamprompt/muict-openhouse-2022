@@ -9,8 +9,6 @@ COPY . .
 RUN turbo prune --scope=api --docker
 
 FROM nodebase AS installer
-RUN apk add --no-cache libc6-compat
-RUN apk update
 WORKDIR /app
 
 COPY --from=builder /app/out/json/ .
