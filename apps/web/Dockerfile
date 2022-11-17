@@ -29,6 +29,7 @@ RUN adduser --system --uid 1001 nextjs
 USER nextjs
 
 COPY --from=installer /app/apps/web/next.config.js ./apps/web/next.config.js
+COPY --from=installer /app/apps/web/next-i18next.config.js ./apps/web/next-i18next.config.js
 COPY --from=installer /app/apps/web/package.json ./apps/web/package.json
 COPY --from=installer /app/node_modules ./node_modules
 COPY --from=installer /app/apps/web/node_modules ./apps/web/node_modules
