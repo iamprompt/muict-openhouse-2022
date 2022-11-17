@@ -4,11 +4,6 @@ on:
   push:
     branches: ['main']
   workflow_dispatch:
-    inputs:
-      API_URL_WITH_PREFIX:
-        default: /api
-        description: 'API URL with prefix'
-        required: true
 
 env:
   REGISTRY: ghcr.io
@@ -40,7 +35,7 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-web:latest
           build-args: |
-            NEXT_PUBLIC_API_BASE_URL=${{ inputs.API_URL_WITH_PREFIX}}
+            NEXT_PUBLIC_API_BASE_URL=/api
 
       - name: Build and push API Docker image
         uses: docker/build-push-action@v3
