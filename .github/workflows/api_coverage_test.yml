@@ -49,9 +49,8 @@ jobs:
         uses: ArtiomTr/jest-coverage-report-action@v2
         id: coverage
         with:
+          skip-step: all
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          package-manager: pnpm
-          test-script: pnpm --filter=api test
-          coverage-file: ./apps/api/coverage/coverage-final.json
-          base-coverage-file: ./apps/api/coverage/coverage-final.json
+          coverage-file: ./apps/api/coverage-report.json
+          base-coverage-file: ./apps/api/coverage-report.json
           output: comment, report-markdown
