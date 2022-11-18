@@ -1,4 +1,4 @@
-import { normalizeString } from '../../../utils/string'
+import { normalizeString } from '~/utils/string'
 
 export const checkAnswer = (expectedAnswer: string | string[], answer: string | string[]) => {
   const normalizedExpectedAnswer = Array.isArray(expectedAnswer)

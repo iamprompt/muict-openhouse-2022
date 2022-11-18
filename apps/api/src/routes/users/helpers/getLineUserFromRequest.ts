@@ -1,5 +1,5 @@
 import { Request } from 'express'
-import { getAuthorizationToken } from '../../../utils'
+import { getAuthorizationToken } from '~/utils/headers'
 import { getLineUserFromIdToken } from './getLineUserFromIdToken'
 
 export const getLineUserFromRequest = async (req: Request) => {

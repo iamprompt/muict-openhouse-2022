@@ -1,7 +1,7 @@
-import { BASE_URL } from '../../../const/config'
-import { FLEX_IG_FILTER, FLEX_TICKET_BUBBLE } from '../../../const/line/flex-messages'
-import { getLiffUrl } from '../../../const/line/liff'
-import { LINEClient } from '../../../libs/line'
+import { BASE_URL } from '~/const/config'
+import { FLEX_IG_FILTER, FLEX_TICKET_BUBBLE } from '~/const/line/flex-messages'
+import { getLiffUrl } from '~/const/line/liff'
+import { LINEClient } from '~/libs/line'
 import { Participant } from '../../../types/Participant'
 
 export const sendTicketToLine = async (lineUid: string, profile: Participant) => {

@@ -1,4 +1,4 @@
-import { QuestLogStatus } from '../../../models/questlog.model'
+import { QuestLogStatus } from '~/models/questlog.model'
 import { getQuestLogFromStatus } from '../../quests/helpers/getQuestLogFromStatus'
 
 export const isRewardClaimed = async (userId: string) => {

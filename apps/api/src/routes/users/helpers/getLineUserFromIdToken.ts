@@ -40,6 +40,8 @@ export const getLineUserFromIdToken = async (idToken: string): Promise<LineUserP
       }
     )
 
+    console.log(data)
+
     return {
       userId: data.sub,
       displayName: data.name,

@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { z } from 'zod'
-import QuestLog from '../../models/questlog.model'
+import QuestLog from '~/models/questlog.model'
 import { getLineUserFromRequest } from '../users/helpers/getLineUserFromRequest'
 import { getUserRecordFromLineUId } from '../users/helpers/getUserRecordFromLineUId'
 import { checkAnswer } from './helpers/checkAnswer'

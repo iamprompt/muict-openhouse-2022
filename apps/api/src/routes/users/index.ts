@@ -1,9 +1,9 @@
 import { Request, Router } from 'express'
-import { Participant, ParticipantValidator } from '../../types/Participant'
-import { getAuthorizationToken } from '../../utils'
-import { getQuestStatus } from '../quests/helpers/getQuestStatus'
-import { getRewardEligibility } from '../rewards/helpers/getRewardEligibility'
-import { isRewardClaimed } from '../rewards/helpers/isRewardClaimed'
+import { getQuestStatus } from '~/routes/quests/helpers/getQuestStatus'
+import { getRewardEligibility } from '~/routes/rewards/helpers/getRewardEligibility'
+import { isRewardClaimed } from '~/routes/rewards/helpers/isRewardClaimed'
+import { Participant, ParticipantValidator } from '~/types/Participant'
+import { getAuthorizationToken } from '~/utils/headers'
 import { getLineUserFromRequest } from './helpers/getLineUserFromRequest'
 import { getUserRecordFromLineUId } from './helpers/getUserRecordFromLineUId'
 import isParticipantRegistered from './helpers/isParticipantRegistered'
@@ -53,7 +53,12 @@ router.post('/register', async (req: Request<undefined, any, Participant>, res) 
 router.get('/isRegistered', async (req, res) => {
   try {
     const user = await getLineUserFromRequest(req)
+
+    console.log('user', user)
+
     const isRegistered = user ? await isParticipantRegistered(user?.userId) : false
+
+    console.log(isRegistered)
 
     res.status(200).json({
       success: true,

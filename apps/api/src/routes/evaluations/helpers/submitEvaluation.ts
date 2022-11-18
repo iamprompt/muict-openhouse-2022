@@ -1,8 +1,8 @@
-import Evaluation from '../../../models/evaluation.model'
-import QuestLog from '../../../models/questlog.model'
-import { Participant } from '../../../types/Participant'
-import { getLineUserFromIdToken } from '../../users/helpers/getLineUserFromIdToken'
-import { getUserRecordFromLineUId } from '../../users/helpers/getUserRecordFromLineUId'
+import Evaluation from '~/models/evaluation.model'
+import QuestLog from '~/models/questlog.model'
+import { Participant } from '~/types/Participant'
+import { getLineUserFromIdToken } from '~/routes/users/helpers/getLineUserFromIdToken'
+import { getUserRecordFromLineUId } from '~/routes/users/helpers/getUserRecordFromLineUId'
 
 const submitEvaluation = async (data: Participant, lineToken?: string) => {
   try {

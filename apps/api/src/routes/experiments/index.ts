@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import Participant from '../../models/participant.model'
+import Participant from '~/models/participant.model'
 
 const router = Router()
 

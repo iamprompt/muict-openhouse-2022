@@ -1,5 +1,5 @@
-import { questLists } from '../../../const/quests/quests'
-import QuestLog, { QuestLogStatus } from '../../../models/questlog.model'
+import { questLists } from '~/const/quests/quests'
+import QuestLog, { QuestLogStatus } from '~/models/questlog.model'
 
 /* eslint-disable no-unused-vars */
 export enum QUEST_STATUS {

@@ -1,4 +1,4 @@
-import { I18nTranslation, IQuestion, QUESTIONS, QUESTION_TYPE } from '../../../const/quests/questions'
+import { I18nTranslation, IQuestion, QUESTIONS, QUESTION_TYPE } from '~/const/quests/questions'
 
 export const formatQuestion = (
   question: IQuestion<I18nTranslation>,

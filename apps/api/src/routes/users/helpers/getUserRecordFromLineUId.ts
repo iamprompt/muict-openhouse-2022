@@ -1,4 +1,4 @@
-import Participant from '../../../models/participant.model'
+import Participant from '~/models/participant.model'
 
 export const getUserRecordFromLineUId = async (uId: string, toThrow = false) => {
   const user = await Participant.findOne({ lineUserId: uId }).exec()

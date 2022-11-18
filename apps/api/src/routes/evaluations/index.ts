@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { getAuthorizationToken } from '../../utils'
+import { getAuthorizationToken } from '~/utils/headers'
 import isEvaluated from './helpers/isEvaluated'
 import submitEvaluation from './helpers/submitEvaluation'
 
