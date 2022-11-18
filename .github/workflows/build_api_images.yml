@@ -1,8 +1,11 @@
-name: Create and publish a Docker image
+name: Create and publish a API Docker image
 
 on:
   push:
     branches: ['main']
+    paths:
+      - '!apps/**'
+      - 'apps/api/**'
   workflow_dispatch:
 
 env:
@@ -26,16 +29,6 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push WEB Docker image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          file: ./apps/web/Dockerfile
-          push: true
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-web:latest
-          build-args: |
-            NEXT_PUBLIC_API_BASE_URL=/api
 
       - name: Build and push API Docker image
         uses: docker/build-push-action@v3
