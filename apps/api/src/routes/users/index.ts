@@ -53,13 +53,7 @@ router.post('/register', async (req: Request<undefined, any, Participant>, res) 
 router.get('/isRegistered', async (req, res) => {
   try {
     const user = await getLineUserFromRequest(req)
-
-    console.log('user', user)
-
     const isRegistered = user ? await isParticipantRegistered(user?.userId) : false
-
-    console.log(isRegistered)
-
     res.status(200).json({
       success: true,
       payload: {
