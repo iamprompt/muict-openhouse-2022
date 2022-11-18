@@ -2,7 +2,7 @@ import type { FlexBubble } from '@line/bot-sdk'
 
 const LINE_MESSAGE_STATIC_ASSET_DIR =
   process.env.NODE_ENV === 'production'
-    ? 'https://muictop2022.iamprompt.me/static/line-message'
+    ? 'https://muictop2022-dev.iamprompt.me/static/line-message'
     : 'https://mbam2-local.iamprompt.me/static/line-message'
 
 export const FLEX_TICKET_BUBBLE = (name: string, profileImg: string): FlexBubble => ({
