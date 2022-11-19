@@ -1,4 +1,4 @@
-name: Generate API test coverage report
+name: Test Web
 
 on:
   push:
@@ -49,6 +49,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
+          install: false
           build: pnpm --filter=web build
           start: pnpm --filter=web start
           wait-on: 'http://localhost:3000'
