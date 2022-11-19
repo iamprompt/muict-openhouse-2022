@@ -6,6 +6,8 @@ on:
       - '**'
       - '!apps/**'
       - 'apps/web/**'
+      - '!.github/**'
+      - '.github/workflows/web_coverage_test.yml'
   pull_request:
     branches: [main]
 

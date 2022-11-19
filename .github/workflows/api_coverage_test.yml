@@ -6,6 +6,8 @@ on:
       - '**'
       - '!apps/**'
       - 'apps/api/**'
+      - '!.github/**'
+      - '.github/workflows/api_coverage_test.yml'
   pull_request:
     branches: [main]
 

@@ -6,6 +6,8 @@ on:
     paths:
       - '!apps/**'
       - 'apps/web/**'
+      - '!.github/**'
+      - '.github/workflows/build_web_images.yml'
   workflow_dispatch:
 
 env:
