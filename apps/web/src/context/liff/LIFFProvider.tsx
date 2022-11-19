@@ -36,8 +36,16 @@ const useLIFFProvider = (config: ILIFFConfig): ILIFFContextType => {
       setLiffState(LIFF_STATE.PREPARE)
       // Import LIFF SDK
       const liffModule = await import('@line/liff')
-      liff.current = liffModule.default
-      window.liff = liffModule.default // Expose to window
+
+      // If the app is in testing environment, use stub SDK
+      if (window.Cypress) {
+        liff.current = window.Cypress.liffMock
+        window.liff = window.Cypress.liffMock
+      } else {
+        liff.current = liffModule.default
+        window.liff = liffModule.default // Expose to window
+      }
+
       console.log('LIFF SDK loaded')
 
       setLiffState(LIFF_STATE.LOADING)

@@ -61,6 +61,7 @@ const Page = () => {
             iconPosition="left"
             label="สัญชาติไทย"
             className="w-full sm:w-1/2"
+            data-cy="nationality-th"
             onClick={() => {
               dispatch('form/register/setFields', { language: 'th' })
               dispatch('form/register/nextStep')
@@ -72,6 +73,7 @@ const Page = () => {
             iconPosition="left"
             label="International"
             className="w-full sm:w-1/2"
+            data-cy="nationality-en"
             onClick={() => {
               dispatch('form/register/setFields', { language: 'en' })
               dispatch('form/register/nextStep')

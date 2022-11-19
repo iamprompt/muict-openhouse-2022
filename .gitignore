@@ -36,3 +36,5 @@ dist
 .env
 
 coverage-report.json
+
+**/cypress/videos

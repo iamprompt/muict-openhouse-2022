@@ -114,6 +114,7 @@ const Page: NextPage = () => {
     <Wrapper>
       <div className="mx-auto flex min-h-screen max-w-screen-md flex-col px-8 py-10 sm:justify-center">
         <form
+          data-cy="additional-info-form"
           onSubmit={handleSubmit(
             async (data) => {
               dispatch('form/register/setFields', {
@@ -158,6 +159,7 @@ const Page: NextPage = () => {
             <div className="w-full space-y-5">
               <SelectInput
                 id="province"
+                data-cy="province-select"
                 label={t('REG_FORM.REG_FIELD_PROVINCE')}
                 required
                 className="w-full capitalize"
@@ -167,6 +169,7 @@ const Page: NextPage = () => {
               {isEduRequired && (
                 <TextInput
                   id="school"
+                  data-cy="school-input"
                   label={t('REG_FORM.REG_FIELD_SCHOOL')}
                   placeholder={t('REG_FORM.REG_FIELD_SCHOOL_PLACEHOLDER')}
                   error={errors.school?.message}
@@ -178,6 +181,7 @@ const Page: NextPage = () => {
               {isEduRequired && (
                 <SelectInput
                   id="level"
+                  data-cy="level-select"
                   label={t('REG_FORM.REG_FIELD_SCHOOL_LEVEL')}
                   required
                   className="w-full"

@@ -31,6 +31,7 @@ const Page = () => {
               key={type.type}
               icon={type.icon}
               label={t(`TYPE_SELECTION.${type.label}`)}
+              data-cy={`registrant-type-${type.type}`}
               variant={i % 2 === 0 ? 'primary' : 'secondary'}
               className="cursor-pointer"
               onClick={() => {

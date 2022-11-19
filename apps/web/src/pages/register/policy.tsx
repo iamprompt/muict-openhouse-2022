@@ -30,60 +30,44 @@ interface PolicyProps {
 const THPolicy: FC<PolicyProps> = ({ register }) => {
   return (
     <div className="rounded-xl sm:bg-white sm:p-16 sm:text-black">
-      <h1 className="mb-4 text-center font-heading text-3xl font-bold">
-        การให้สิทธิ์กับเจ้าของข้อมูลส่วนบุคคล
-      </h1>
+      <h1 className="mb-4 text-center font-heading text-3xl font-bold">การให้สิทธิ์กับเจ้าของข้อมูลส่วนบุคคล</h1>
       <div className="min-h-[24rem] space-y-5 overflow-hidden rounded-xl bg-white p-10 text-black shadow-lg sm:p-5 sm:shadow-none">
         <div>
           <ol className="list-inside list-disc">
             <li>
-              คณะเทคโนโลยีสารสนเทศและการสื่อสาร มหาวิทยาลัยมหิดล
-              จะเก็บรวบรวมข้อมูลส่วนบุคคลของผู้ใช้บริการของคณะฯ เท่าที่จำเป็น
-              ได้แก่{' '}
+              คณะเทคโนโลยีสารสนเทศและการสื่อสาร มหาวิทยาลัยมหิดล จะเก็บรวบรวมข้อมูลส่วนบุคคลของผู้ใช้บริการของคณะฯ
+              เท่าที่จำเป็น ได้แก่{' '}
               <span className="font-bold text-dst-prussian-blue">
-                ชื่อ นามสกุล อีเมล หมายเลขโทรศัพท์ จังหวัดที่อยู่อาศัย
-                ชื่อสถานศึกษาและระดับการศึกษา เป็นต้น
+                ชื่อ นามสกุล อีเมล หมายเลขโทรศัพท์ จังหวัดที่อยู่อาศัย ชื่อสถานศึกษาและระดับการศึกษา เป็นต้น
               </span>{' '}
               โดยขึ้นอยู่กับประเภทของการรับบริการที่ท่านใช้ผ่านเว็บไซต์ของคณะฯ
             </li>
             <li>
-              คณะฯ จะใช้ข้อมูลส่วนบุคคลของท่านเพื่อประโยชน์ในการให้บริการ
-              และการดำเนินการตามวัตถุประสงค์และภารกิจของคณะฯ
-              ภายใต้ขอบเขตของกฎหมายที่เกี่ยวข้อง
-              รวมถึงรับทราบข่าวสารกิจกรรมของคณะฯ
+              คณะฯ จะใช้ข้อมูลส่วนบุคคลของท่านเพื่อประโยชน์ในการให้บริการ และการดำเนินการตามวัตถุประสงค์และภารกิจของคณะฯ
+              ภายใต้ขอบเขตของกฎหมายที่เกี่ยวข้อง รวมถึงรับทราบข่าวสารกิจกรรมของคณะฯ
             </li>
             <li>
               <span className="font-bold text-dst-prussian-blue">
                 คณะฯ จะไม่เปิดเผยข้อมูลส่วนบุคคลของท่านแก่บุคคลที่สาม
               </span>{' '}
-              เพื่อนำไปใช้ในการดำเนินกิจกรรมที่ไม่เกี่ยวข้อง
-              เว้นแต่จะได้รับความยินยอมจากเจ้าของข้อมูล
+              เพื่อนำไปใช้ในการดำเนินกิจกรรมที่ไม่เกี่ยวข้อง เว้นแต่จะได้รับความยินยอมจากเจ้าของข้อมูล
               หรือเป็นกรณีที่มีกฎหมายกำหนดให้กระทำได้เท่านั้น
             </li>
             <li>
-              หากท่านประสงค์เปลี่ยนแปลงหรือแก้ไขข้อมูลส่วนบุคคล
-              สามารถส่งข้อมูลที่ท่านต้องการแก้ไข
+              หากท่านประสงค์เปลี่ยนแปลงหรือแก้ไขข้อมูลส่วนบุคคล สามารถส่งข้อมูลที่ท่านต้องการแก้ไข
               รวมถึงประสงค์จะขอลบข้อมูลส่วนบุคคลมาที่{' '}
-              <a href="mailto:tanakorn.kan@mahidol.ac.th">
-                tanakorn.kan@mahidol.ac.th
-              </a>{' '}
-              หรือ{' '}
-              <a href="mailto:prach.cha@mahidol.ac.th">
-                prach.cha@mahidol.ac.th
-              </a>
+              <a href="mailto:tanakorn.kan@mahidol.ac.th">tanakorn.kan@mahidol.ac.th</a> หรือ{' '}
+              <a href="mailto:prach.cha@mahidol.ac.th">prach.cha@mahidol.ac.th</a>
             </li>
           </ol>
         </div>
 
         <div className="bg-dst-sunglow/20 p-5">
-          <h3 className="mb-2 text-center font-heading font-bold">
-            ในระหว่างกิจกรรม ICT Mahidol Open House
-          </h3>
+          <h3 className="mb-2 text-center font-heading font-bold">ในระหว่างกิจกรรม ICT Mahidol Open House</h3>
           <ol className="list-inside list-disc">
             <li>
-              จะมีการบันทึกภาพ เสียง คลิปเพื่อเผยแพร่ภาพถ่าย วิดีโอ เนื้อหา
-              ข้อมูลต่าง ๆ บนเว็บไซต์ บนอินเตอร์เน็ต กระดาษข่าวอื่น ๆ
-              ในที่สาธารณะ หรือตามสถานที่ใดๆ เพื่อเป็น สื่อกลาง
+              จะมีการบันทึกภาพ เสียง คลิปเพื่อเผยแพร่ภาพถ่าย วิดีโอ เนื้อหา ข้อมูลต่าง ๆ บนเว็บไซต์ บนอินเตอร์เน็ต
+              กระดาษข่าวอื่น ๆ ในที่สาธารณะ หรือตามสถานที่ใดๆ เพื่อเป็น สื่อกลาง
               ในการสื่อสารกับสังคมและเป็นประโยชน์ต่อการศึกษาเท่านั้น
             </li>
             <li>
@@ -99,6 +83,7 @@ const THPolicy: FC<PolicyProps> = ({ register }) => {
               type="checkbox"
               className="mr-2"
               id="policyAgreement"
+              data-cy="policy-agreement"
               {...register('policyAgreement')}
             />
             <label htmlFor="policyAgreement">
@@ -126,47 +111,35 @@ const THPolicy: FC<PolicyProps> = ({ register }) => {
 const ENPolicy: FC<PolicyProps> = ({ register }) => {
   return (
     <div className="rounded-xl sm:bg-white sm:p-16 sm:text-black">
-      <h1 className="mb-4 text-center font-heading text-3xl font-bold">
-        Privacy Notice
-      </h1>
+      <h1 className="mb-4 text-center font-heading text-3xl font-bold">Privacy Notice</h1>
       <div className="min-h-[24rem] space-y-5 overflow-hidden rounded-xl bg-white p-10 text-black shadow-lg sm:p-5 sm:shadow-none">
         <div>
           <ol className="list-inside list-disc">
             <li>
-              The Faculty of Information and Communication Technology, Mahidol
-              University shall collect some necessary personal data of a visitor
-              such as{' '}
+              The Faculty of Information and Communication Technology, Mahidol University shall collect some necessary
+              personal data of a visitor such as{' '}
               <span className="font-bold text-dst-prussian-blue">
-                name, last name, email, telephone number, residential province,
-                name of school and education level, etc.,
+                name, last name, email, telephone number, residential province, name of school and education level,
+                etc.,
               </span>{' '}
               depending on type of a visitor.
             </li>
             <li>
-              The Faculty of ICT shall use your personal data for the purposes
-              of providing services, proceeding with its objectives and missions
-              which are under scopes of the relevant law, as well as delivering
-              news from the Faculty of ICT.
+              The Faculty of ICT shall use your personal data for the purposes of providing services, proceeding with
+              its objectives and missions which are under scopes of the relevant law, as well as delivering news from
+              the Faculty of ICT.
             </li>
             <li>
               <span className="font-bold text-dst-prussian-blue">
-                The Faculty of ICT shall not disclose your personal data to
-                third parties,
+                The Faculty of ICT shall not disclose your personal data to third parties,
               </span>{' '}
-              to be used for unrelated activities, except with the consent of
-              the data subject or in cases where the law is required to do so
-              only.
+              to be used for unrelated activities, except with the consent of the data subject or in cases where the law
+              is required to do so only.
             </li>
             <li>
-              In case that you would like to change, edit or delete any of your
-              personal data, you can send a request via email:{' '}
-              <a href="mailto:tanakorn.kan@mahidol.ac.th">
-                tanakorn.kan@mahidol.ac.th
-              </a>{' '}
-              or{' '}
-              <a href="mailto:prach.cha@mahidol.ac.th">
-                prach.cha@mahidol.ac.th
-              </a>
+              In case that you would like to change, edit or delete any of your personal data, you can send a request
+              via email: <a href="mailto:tanakorn.kan@mahidol.ac.th">tanakorn.kan@mahidol.ac.th</a> or{' '}
+              <a href="mailto:prach.cha@mahidol.ac.th">prach.cha@mahidol.ac.th</a>
             </li>
           </ol>
         </div>
@@ -177,11 +150,10 @@ const ENPolicy: FC<PolicyProps> = ({ register }) => {
           </h3>
           <ol className="list-inside list-disc">
             <li>
-              The Faculty of ICT will record pictures/videos which shall be used
-              in any public media directly or indirectly under the name of the
-              Faculty of ICT, Mahidol University for the benefit of education
-              only. Your personal data shall be kept confidentially until the
-              completion of the Faculty of ICT&apos;s objectives.
+              The Faculty of ICT will record pictures/videos which shall be used in any public media directly or
+              indirectly under the name of the Faculty of ICT, Mahidol University for the benefit of education only.
+              Your personal data shall be kept confidentially until the completion of the Faculty of ICT&apos;s
+              objectives.
             </li>
           </ol>
         </div>
@@ -192,11 +164,12 @@ const ENPolicy: FC<PolicyProps> = ({ register }) => {
               type="checkbox"
               className="mr-2"
               id="policyAgreement"
+              data-cy="policy-agreement"
               {...register('policyAgreement')}
             />
             <label htmlFor="policyAgreement">
-              I have read and understood the terms and conditions for disclosure
-              of the personal information mentioned above.
+              I have read and understood the terms and conditions for disclosure of the personal information mentioned
+              above.
             </label>
           </div>
         </div>
@@ -234,17 +207,14 @@ const Page: NextPage = () => {
     <Wrapper>
       <div className="mx-auto flex min-h-screen max-w-screen-md flex-col px-8 py-10 sm:justify-center">
         <form
+          data-cy="policy-form"
           onSubmit={handleSubmit((data) => {
             dispatch('form/register/setFields', data)
             dispatch('form/register/nextStep')
             push('/register/info')
           })}
         >
-          {locale === 'th' ? (
-            <THPolicy register={register} />
-          ) : (
-            <ENPolicy register={register} />
-          )}
+          {locale === 'th' ? <THPolicy register={register} /> : <ENPolicy register={register} />}
           <div className="mt-10 flex justify-between gap-5">
             <Button
               label={tCommon('BUTTON_LABEL.BACK')}
