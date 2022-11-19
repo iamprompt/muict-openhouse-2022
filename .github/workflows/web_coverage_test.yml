@@ -43,13 +43,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
-        run: pnpm install
+      # - name: Install dependencies
+      #   run: pnpm install
 
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          install: false
+          # install: false
           build: pnpm --filter=web build
           start: pnpm --filter=web start
           wait-on: 'http://localhost:3000'
