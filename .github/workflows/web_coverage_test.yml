@@ -66,3 +66,9 @@ jobs:
           wait-on: 'http://localhost:3000'
           command: npx cypress run
           working-directory: apps/web
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-videos
+          path: apps/web/cypress/videos
