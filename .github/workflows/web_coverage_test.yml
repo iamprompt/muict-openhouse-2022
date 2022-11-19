@@ -5,7 +5,7 @@ on:
     paths:
       - '**'
       - '!apps/**'
-      - 'apps/api/**'
+      - 'apps/web/**'
   pull_request:
     branches: [main]
 
@@ -46,15 +46,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Running API test
-        run: pnpm --filter=api test
-
-      - name: Generate API test coverage report
-        uses: ArtiomTr/jest-coverage-report-action@v2
-        id: coverage
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
         with:
-          skip-step: all
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          coverage-file: ./apps/api/coverage-report.json
-          base-coverage-file: ./apps/api/coverage-report.json
-          output: comment, report-markdown
+          build: pnpm --filter=web build
+          start: pnpm --filter=web start
+          wait-on: 'http://localhost:3000'
+          working-directory: apps/web
