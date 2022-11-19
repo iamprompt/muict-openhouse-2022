@@ -51,11 +51,15 @@ jobs:
       - name: Install Cypress
         run: pnpm --filter=web cypress:install
 
+      - name: Build Web
+        run: pnpm --filter=web build
+        env:
+          NEXT_PUBLIC_API_BASE_URL: http://localhost:5001/api
+
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.0
         with:
           install: false
-          build: pnpm build
           start: pnpm start
           wait-on: 'http://localhost:3000'
           command: npx cypress run
