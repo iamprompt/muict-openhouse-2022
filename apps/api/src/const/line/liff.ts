@@ -1,5 +1,5 @@
 export const LIFF_ID_BY_ENV = {
-  production: '1657589097-nR7r7Xxp',
+  production: '1657522185-DBKvK220',
   development: '1657522185-7Jyxy33A',
   test: '1657522185-7Jyxy33A',
 }
