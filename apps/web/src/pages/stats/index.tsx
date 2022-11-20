@@ -26,7 +26,7 @@ const Page = () => {
   >(
     isReady
       ? {
-          url: `api/stats/total`,
+          url: `stats/total`,
           method: 'GET',
         }
       : null,
