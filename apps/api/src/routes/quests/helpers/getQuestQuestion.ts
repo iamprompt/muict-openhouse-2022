@@ -46,12 +46,16 @@ export const formatQuestion = (
   return questionResult as IQuestion
 }
 
-export const getQuestQuestion = async (questNo: number, lang: 'th' | 'en' = 'th', question = true, answer = false) => {
+export const getQuestQuestion = async (questNo: number, lang?: 'th' | 'en', question?: boolean, answer?: boolean) => {
   const quests = QUESTIONS.filter((q) => q.questNo === questNo)
 
   if (!quests || !quests.length) {
     throw new Error('Question not found')
   }
 
-  return quests.map((q) => formatQuestion(q, lang, question, answer))
+  // console.log(quests)
+
+  return quests.map((q) => {
+    return formatQuestion(q, lang, question, answer)
+  })
 }
