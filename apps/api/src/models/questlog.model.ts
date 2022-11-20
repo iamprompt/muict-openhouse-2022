@@ -1,6 +1,6 @@
 import type { Document, Model } from 'mongoose'
 import { Schema, model } from 'mongoose'
-import { QuestLog as QuestLogEntity } from '../types/QuestLog'
+import { QuestLog as QuestLogEntity } from '~/types/models/QuestLog'
 
 /* eslint-disable no-unused-vars */
 export enum QuestLogStatus {

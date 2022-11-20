@@ -1,6 +1,6 @@
 import type { Document, Model } from 'mongoose'
 import { Schema, model } from 'mongoose'
-import { Registration as RegistrationEntity } from '../types/Registration'
+import { Registration as RegistrationEntity } from '~/types/models/Registration'
 
 type RegistrationDocument = Document & RegistrationEntity
 

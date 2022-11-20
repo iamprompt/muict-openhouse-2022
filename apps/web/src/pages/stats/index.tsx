@@ -20,13 +20,13 @@ const Page = () => {
   const { data } = useSWR<
     ApiResponseSuccess<{
       total: number
-      date: Record<string, number>
+      dates: Record<string, number>
       timestamp: string
     }>
   >(
     isReady
       ? {
-          url: `api/v2/stats/total?apiKey=ICTNO1`,
+          url: `api/stats/total`,
           method: 'GET',
         }
       : null,
@@ -41,10 +41,7 @@ const Page = () => {
   }
 
   return (
-    <Wrapper
-      variant={BG_VARIANT_TYPES.SPACE}
-      className="flex flex-col items-center justify-center p-10"
-    >
+    <Wrapper variant={BG_VARIANT_TYPES.SPACE} className="flex flex-col items-center justify-center p-10">
       <IctMahidolOpenHouseWordmark className="mx-auto h-36" />
 
       <div>
@@ -57,23 +54,16 @@ const Page = () => {
                 key={index}
                 className="inline-block w-44 rounded-xl bg-white px-5 text-center font-heading font-bold text-ict-magenta-process"
               >
-                <div className="text-center text-[200px] font-bold leading-tight">
-                  {number}
-                </div>
+                <div className="text-center text-[200px] font-bold leading-tight">{number}</div>
               </div>
             ))}
         </div>
 
         <div className="mt-5 flex gap-5">
-          {Object.entries(data?.payload.date).map(([date, count]) => (
-            <div
-              key={date}
-              className="w-full rounded-xl bg-white px-5 py-3 text-center font-heading text-black"
-            >
+          {Object.entries(data?.payload.dates).map(([date, count]) => (
+            <div key={date} className="w-full rounded-xl bg-white px-5 py-3 text-center font-heading text-black">
               <div>{dayjs(date).format('DD MMMM YYYY')}</div>
-              <div className="text-center text-4xl font-bold text-ict-magenta-process">
-                {count}
-              </div>
+              <div className="text-center text-4xl font-bold text-ict-magenta-process">{count}</div>
             </div>
           ))}
         </div>
@@ -81,8 +71,7 @@ const Page = () => {
 
       <div>
         <div className="mt-10 text-center font-heading text-2xl font-bold">
-          ข้อมูล ณ วันที่{' '}
-          {dayjs(data?.payload.timestamp).format('DD MMMM YYYY HH:mm:ss น.')}
+          ข้อมูล ณ วันที่ {dayjs(data?.payload.timestamp).format('DD MMMM YYYY HH:mm:ss น.')}
         </div>
       </div>
     </Wrapper>

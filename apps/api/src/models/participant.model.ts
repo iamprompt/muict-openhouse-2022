@@ -1,6 +1,6 @@
 import type { Document, Model } from 'mongoose'
 import { Schema, model } from 'mongoose'
-import { Participant as ParticipantEntity } from '../types/Participant'
+import { Participant as ParticipantEntity } from '~/types/models/Participant'
 
 export type ParticipantDocument = Document & ParticipantEntity
 

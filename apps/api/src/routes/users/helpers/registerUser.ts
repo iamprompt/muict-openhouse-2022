@@ -3,7 +3,7 @@ import { LINEClient } from '~/libs/line'
 import Participant from '~/models/participant.model'
 import QuestLog from '~/models/questlog.model'
 import Registration from '~/models/registration.model'
-import { Participant as IParticipant } from '../../../types/Participant'
+import { Participant as IParticipant } from '~/types/models/Participant'
 import { getLineUserFromIdToken } from './getLineUserFromIdToken'
 import { sendTicketToLine } from './sendTicketToLINE'
 

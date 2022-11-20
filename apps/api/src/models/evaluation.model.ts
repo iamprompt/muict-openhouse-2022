@@ -1,6 +1,6 @@
 import type { Document, Model } from 'mongoose'
 import { Schema, model } from 'mongoose'
-import { Evaluation as EvaluationEntity } from '../types/Evaluation'
+import { Evaluation as EvaluationEntity } from '~/types/models/Evaluation'
 
 export type EvaluationDocument = Document & EvaluationEntity
 
