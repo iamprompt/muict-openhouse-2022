@@ -1,6 +1,6 @@
 import Evaluation from '~/models/evaluation.model'
 import QuestLog from '~/models/questlog.model'
-import { Participant } from '~/types/Participant'
+import { Participant } from '~/types/models/Participant'
 import { getLineUserFromIdToken } from '~/routes/users/helpers/getLineUserFromIdToken'
 import { getUserRecordFromLineUId } from '~/routes/users/helpers/getUserRecordFromLineUId'
 
