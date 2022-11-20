@@ -1,5 +1,10 @@
 import { checkAnswer } from '~/routes/quests/helpers/checkAnswer'
 import { getQuestQuestion } from '~/routes/quests/helpers/getQuestQuestion'
+import {getLineUserFromRequest} from '~/routes/users/helpers/getLineUserFromRequest'
+import { Request } from 'express'
+jest.mock('~/routes/users/helpers/getLineUserFromIdToken')
+import { getLineUserFromIdToken, LineUserProfile } from '~/routes/users/helpers/getLineUserFromIdToken'
+import { getMockReq, getMockRes } from '@jest-mock/express'
 
 describe('register-unit-tests.ts', () => {
   /**
@@ -154,5 +159,54 @@ describe('register-unit-tests.ts', () => {
     ])
   })
 
-  it('unit test3', async () => {})
+  /**
+   * Test get line user from requets.
+   * getLineUserFromReq(NextApiRequest) will get Line user information by using token from header
+   * If token is valid, it will return
+   *  - userId
+   *  - displayName
+   *  - picture
+   *  - email
+   * Otherwise, it will throw an error.
+   * 
+   * In this test, we apply graph technique, since this function contains only 1 condition. 
+   */
+   it('testGetLineUserFromReq', async () => {
+    let req = {
+      headers : {
+        authorization: 'idk imokay'
+      }
+    }
+
+    const mockedGetLineUserFromIdToken = getLineUserFromIdToken as unknown as jest.Mock<LineUserProfile>;
+    mockedGetLineUserFromIdToken.mockReturnValue(
+      {
+          userId: '1234',
+          displayName: "mairu",
+          picture: "src/public/image.png",
+          email: "mairu@gmail.com",
+        }
+    );
+
+    const mockreq = getMockReq({
+      headers: {
+        authorization: 'Bearer 1234'
+      }
+    })
+
+    expect(await getLineUserFromRequest(mockreq)).toMatchObject({
+      userId: '1234',
+      displayName: "mairu",
+      picture: "src/public/image.png",
+      email: "mairu@gmail.com",
+    })
+    
+    const mockreq2 = getMockReq({
+      headers: {
+        authorization: 'token 1234'
+      }
+    })
+    expect(await getLineUserFromRequest(mockreq2)).toBeNull();
+    
+  });
 })
