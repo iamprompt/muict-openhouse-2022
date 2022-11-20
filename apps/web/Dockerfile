@@ -45,4 +45,6 @@ COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next ./apps/web/.next
 
 WORKDIR /app/apps/web
 
+ENV TZ=Asia/Bangkok
+
 CMD ["pnpm", "start"]

@@ -29,4 +29,6 @@ COPY --from=installer /app/apps/api/node_modules ./apps/api/node_modules
 
 COPY --from=installer /app/apps/api/dist ./apps/api/dist
 
+ENV TZ=Asia/Bangkok
+
 CMD node apps/api/dist/index.js

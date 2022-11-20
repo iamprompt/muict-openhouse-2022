@@ -38,22 +38,4 @@ router.get('/total', async (_req, res) => {
   }
 })
 
-router.get('/types', async (_req, res) => {
-  try {
-    const participants = await getParticipants()
-
-    return res.status(200).json({
-      success: true,
-      payload: { participants, timestamp: new Date().toISOString() },
-    })
-  } catch (error: any) {
-    return res.status(500).json({
-      success: false,
-      payload: {
-        message: error.message,
-      },
-    })
-  }
-})
-
 export { router as statsRouter }
