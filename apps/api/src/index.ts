@@ -9,7 +9,7 @@ dbConnect()
 
 const server = createServer()
 
-scheduleJob('* * * * *', async () => {
+scheduleJob('*/5 * * * *', async () => {
   await audienceUpload()
 })
 
