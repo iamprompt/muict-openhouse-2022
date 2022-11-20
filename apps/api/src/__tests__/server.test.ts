@@ -26,7 +26,7 @@ describe('server', () => {
     mockAxios.reset()
   })
 
-  it('message endpoint says hello', async () => {
+  it('line participant is registered, should return "registered" status', async () => {
     mockAxios.post.mockResolvedValue({
       data: {
         sub: 'U1234567890abcdef1234567890abcdef',
@@ -58,6 +58,48 @@ describe('server', () => {
           success: true,
           payload: {
             isRegistered: true,
+          },
+        })
+      })
+  })
+
+  it('line participant is not registered yet, should return "not registered" status', async () => {
+    mockAxios.post.mockResolvedValue({
+      data: {
+        sub: 'U1234567890abcdef1234567890abcdef',
+        name: 'John Doe',
+        picture: 'https://example.com/picture.jpg',
+        email: 'john.doe@gmail.com',
+      },
+    })
+
+    mockingoose(Participant).toReturn(null, 'findOne')
+
+    await supertest(createServer())
+      .get('/api/users/isRegistered')
+      .set('Authorization', 'Bearer 123')
+      .expect(200)
+      .then((res) => {
+        expect(res.body).toEqual({
+          success: true,
+          payload: {
+            isRegistered: false,
+          },
+        })
+      })
+  })
+
+  it('line participant is not registered yet, should return "not registered" status', async () => {
+    mockingoose(Participant).toReturn(null, 'findOne')
+
+    await supertest(createServer())
+      .get('/api/users/isRegistered')
+      .expect(200)
+      .then((res) => {
+        expect(res.body).toEqual({
+          success: true,
+          payload: {
+            isRegistered: false,
           },
         })
       })

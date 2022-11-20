@@ -34,11 +34,11 @@ describe('register-unit-tests.ts', () => {
    *  - question
    *  - expectedAnswer
    *
-   * In this testcase, we combined ISP and logic coverage technique to acheive 75% coverage.
+   * In this testcase, we combined ISP and graph coverage technique to acheive 75% coverage.
    *
    */
   it('testGetQuestQuestion', async () => {
-    let expectedOutput = [
+    expect(await getQuestQuestion(2, 'th', true, true)).toMatchObject([
       {
         id: 'Q1',
         type: 'TEXT_FIELD',
@@ -47,8 +47,7 @@ describe('register-unit-tests.ts', () => {
         question: 'จำนวนชมรม (Club) ที่จัดแสดงมีกี่ชมรม',
         expectedAnswer: ['4', 'four', 'สี่', '4 ชมรม', '4 clubs', 'four clubs', '4 club', 'four club'],
       },
-    ]
-    expect(await getQuestQuestion(2, 'th', true, true)).toMatchObject(expectedOutput)
+    ])
 
     try {
       await getQuestQuestion(6, 'th', true, true)

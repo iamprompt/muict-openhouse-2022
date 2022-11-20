@@ -6,6 +6,8 @@ on:
       - '**'
       - '!apps/**'
       - 'apps/web/**'
+      - '!.github/**'
+      - '.github/workflows/web_coverage_test.yml'
   pull_request:
     branches: [main]
 
@@ -55,7 +57,13 @@ jobs:
         uses: cypress-io/github-action@v4.2.0
         with:
           install: false
-          build: pnpm --filter=web build
-          start: pnpm --filter=web start
+          start: pnpm start
           wait-on: 'http://localhost:3000'
-          command: pnpm --filter=web cypress:run
+          command: npx cypress run
+          working-directory: apps/web
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-videos
+          path: apps/web/cypress/videos
