@@ -18,6 +18,7 @@ router.get('/total', async (_req, res) => {
     const totalParticipants = Object.keys(participantsByDate).reduce((acc, date) => {
       return acc + participantsByDate[date].length
     }, 0)
+
     const totalParticipantsByDate = Object.keys(participantsByDate).reduce((acc, date) => {
       acc[date] = participantsByDate[date].length
       return acc
@@ -26,6 +27,24 @@ router.get('/total', async (_req, res) => {
     return res.status(200).json({
       success: true,
       payload: { total: totalParticipants, dates: totalParticipantsByDate, timestamp: new Date().toISOString() },
+    })
+  } catch (error: any) {
+    return res.status(500).json({
+      success: false,
+      payload: {
+        message: error.message,
+      },
+    })
+  }
+})
+
+router.get('/types', async (_req, res) => {
+  try {
+    const participants = await getParticipants()
+
+    return res.status(200).json({
+      success: true,
+      payload: { participants, timestamp: new Date().toISOString() },
     })
   } catch (error: any) {
     return res.status(500).json({

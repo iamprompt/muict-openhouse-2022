@@ -6,8 +6,8 @@ export const groupParticipantsByDate = (participants: any[]) => {
     const { createdAt } = participant
     const dateFormatted = dayjs.tz(createdAt).format('YYYY-MM-DD')
 
-    if (!acc.date[dateFormatted]) {
-      acc.date[dateFormatted] = []
+    if (!acc[dateFormatted]) {
+      acc[dateFormatted] = []
     }
 
     acc[dateFormatted].push(participant)
