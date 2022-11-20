@@ -1,7 +1,7 @@
 export const RICH_MENU_BY_ENV = {
   production: {
     DEFAULT: 'richmenu-118cf162f175ff0a6e7833f164022607',
-    REGISTERED: 'richmenu-b6f29a5aceb280157af244b50d8d38f7',
+    REGISTERED: 'richmenu-359271d66295bbcc9edc2dfb1dbcba3f',
   },
   development: {
     DEFAULT: 'richmenu-118cf162f175ff0a6e7833f164022607',
