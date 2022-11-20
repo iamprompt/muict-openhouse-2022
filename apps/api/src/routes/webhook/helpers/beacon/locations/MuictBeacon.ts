@@ -79,18 +79,30 @@ export const MUICTBeaconHandler = async (event: BeaconEvent | FollowEvent) => {
     MUICTOP2022RegistrationFlex,
   ])
 
+  // Check if the MUICT message has sent
+  const MUICTSent = await BeaconLog.find({
+    lineUId: event.source.userId,
+    messageSent: BeaconMessageSent.MUICT_WELCOME,
+  }).exec()
+
+  const isMUICTSent = MUICTSent.length > 0
+
+  if (isMUICTSent) {
+    return
+  }
+
   if (event.type === 'beacon') {
     await BeaconLog.create({
       lineUId: event.source.userId,
       hwid: event.beacon.hwid,
-      type: 'follow',
+      type: 'beacon',
       messageSent: BeaconMessageSent.MUICT_WELCOME,
     })
   } else if (event.type === 'follow') {
     await BeaconLog.create({
       lineUId: event.source.userId,
       type: 'follow',
-      messageSent: BeaconMessageSent.LA_WELCOME,
+      messageSent: BeaconMessageSent.MUICT_WELCOME,
     })
   }
 
