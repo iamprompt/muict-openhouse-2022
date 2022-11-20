@@ -1,6 +1,6 @@
 import type { Document, Model } from 'mongoose'
 import { Schema, model } from 'mongoose'
-import { BeaconLog as BeaconLogEntity } from '../types/BeaconLog'
+import { BeaconLog as BeaconLogEntity } from '../types/models/BeaconLog'
 
 /* eslint-disable no-unused-vars */
 export enum BeaconMessageSent {
