@@ -61,6 +61,7 @@ const Page: NextPage = () => {
           <div className="mt-10 flex justify-end">
             <Button
               type="submit"
+              data-test="next-button"
               label={t('BUTTON_LABEL.NEXT')}
               variant="ictTurquoise"
               className="w-32"

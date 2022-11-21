@@ -32,6 +32,7 @@ const ChoiceInput = forwardRef<HTMLInputElement, ChoiceInputProps>(
           id={`${name}.${id}`}
           ref={ref}
           type={type}
+          data-test={`input-${name}.${id}`}
           className={clsx('hidden', className)}
           name={name}
           {...props}
@@ -44,6 +45,7 @@ const ChoiceInput = forwardRef<HTMLInputElement, ChoiceInputProps>(
               : 'bg-transparent text-white sm:text-black',
           )}
           htmlFor={`${name}.${id}`}
+          data-test={`input-label-${name}.${id}`}
         >
           <Icon
             icon={iconType[type][selected ? 'checked' : 'unchecked']}

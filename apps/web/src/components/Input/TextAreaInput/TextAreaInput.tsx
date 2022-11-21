@@ -18,6 +18,7 @@ const TextAreaInput = forwardRef<HTMLTextAreaElement, TextAreaInputProps>(
             htmlFor={name}
             label={label}
             className="mb-1 block"
+            data-test={`input-label-${name}`}
             required={required}
           />
         )}
@@ -26,6 +27,7 @@ const TextAreaInput = forwardRef<HTMLTextAreaElement, TextAreaInputProps>(
           name={name}
           ref={ref}
           required={required}
+          data-test={`input-${name}`}
           className={clsx('block', className)}
           {...props}
         />

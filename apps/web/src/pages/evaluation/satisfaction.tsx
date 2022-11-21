@@ -73,7 +73,13 @@ const Page: NextPage = () => {
               className="w-32"
               onClick={() => push('/evaluation/general')}
             />
-            <Button type="submit" label={t('BUTTON_LABEL.NEXT')} variant="ictTurquoise" className="w-32" />
+            <Button
+              type="submit"
+              data-test="next-button"
+              label={t('BUTTON_LABEL.NEXT')}
+              variant="ictTurquoise"
+              className="w-32"
+            />
           </div>
         </form>
       </div>

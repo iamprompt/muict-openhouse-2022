@@ -22,6 +22,7 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             label={label}
             className="mb-1 block"
             required={required}
+            data-test={`input-label-${name}`}
           />
             )
           : null}
@@ -32,6 +33,7 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             name={name}
             ref={ref}
             // required={required}
+            data-test={`input-${name}`}
             className={clsx('block', className)}
             {...props}
           />

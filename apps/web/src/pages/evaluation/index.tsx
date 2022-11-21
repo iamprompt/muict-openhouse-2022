@@ -53,6 +53,7 @@ const Page = () => {
             label={t('START_EVAL_BUTTON', { ns: 'evaluation' })}
             variant="ictTurquoise"
             className="mx-auto w-full sm:w-1/2"
+            data-test="start-eval-button"
             onClick={() => {
               push('/evaluation/general')
             }}

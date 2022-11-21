@@ -24,6 +24,7 @@ const SelectInput = forwardRef<HTMLSelectElement, SelectInputProps>(
             htmlFor={name}
             label={label}
             className="mb-1 block"
+            data-test={`input-label-${name}`}
             required={required}
           />
         )}
@@ -32,6 +33,7 @@ const SelectInput = forwardRef<HTMLSelectElement, SelectInputProps>(
           id={name}
           ref={ref}
           required={required}
+          data-test={`input-select-${name}`}
           className={clsx(
             'appearance-none rounded-xl border border-gray-200 py-2 px-3 text-black outline-none placeholder:text-gray-300',
             className,
