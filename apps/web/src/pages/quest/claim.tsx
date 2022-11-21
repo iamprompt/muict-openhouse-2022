@@ -1,5 +1,4 @@
 import { Dialog, Transition } from '@headlessui/react'
-import axios from 'axios'
 import type { GetServerSideProps, NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -32,19 +31,17 @@ const Page: NextPage = () => {
           token: liff?.getIDToken?.() ? liff.getIDToken() : undefined,
         }
       : null,
-    fetcher
+    fetcher,
   )
 
   const [isClaimed, setIsClaimed] = useState<boolean>(false)
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false)
 
-  if (error) {
+  if (error)
     return <div>fail</div>
-  }
 
-  if (!data) {
+  if (!data)
     return <LoadingWrapper />
-  }
 
   return (
     <Wrapper className="relative px-5 py-10">
@@ -56,11 +53,11 @@ const Page: NextPage = () => {
               !data.payload.isEligible
                 ? 'CLAIM_REWARD.NOT_ELIGIBLE_TITLE'
                 : data.payload.isClaimed
-                ? 'CLAIM_REWARD.CLAIMED_TITLE'
-                : 'CLAIM_REWARD.ELIGIBLE_TITLE',
+                  ? 'CLAIM_REWARD.CLAIMED_TITLE'
+                  : 'CLAIM_REWARD.ELIGIBLE_TITLE',
               {
                 ns: 'activity',
-              }
+              },
             )}
           </h1>
           <h2 className="text-2xl">
@@ -68,9 +65,9 @@ const Page: NextPage = () => {
               !data.payload.isEligible
                 ? 'CLAIM_REWARD.NOT_ELIGIBLE_SUBTITLE'
                 : data.payload.isClaimed
-                ? 'CLAIM_REWARD.CLAIMED_SUBTITLE'
-                : 'CLAIM_REWARD.ELIGIBLE_SUBTITLE',
-              { ns: 'activity' }
+                  ? 'CLAIM_REWARD.CLAIMED_SUBTITLE'
+                  : 'CLAIM_REWARD.ELIGIBLE_SUBTITLE',
+              { ns: 'activity' },
             )}
           </h2>
         </div>
@@ -105,9 +102,8 @@ const Page: NextPage = () => {
               disabled={isClaimed}
               className="w-full disabled:cursor-not-allowed"
               onClick={() => {
-                if (isClaimed) {
+                if (isClaimed)
                   return
-                }
 
                 setIsDialogOpen(true)
               }}
@@ -116,7 +112,7 @@ const Page: NextPage = () => {
         </div>
       </div>
       <Transition appear show={isDialogOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={() => setIsDialogOpen((v) => !v)}>
+        <Dialog as="div" className="relative z-10" onClose={() => setIsDialogOpen(v => !v)}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -168,8 +164,9 @@ const Page: NextPage = () => {
                           })
 
                           setIsClaimed(true)
-                          setIsDialogOpen((v) => !v)
-                        } catch (error) {}
+                          setIsDialogOpen(v => !v)
+                        }
+                        catch (error) {}
                       }}
                     />
                   </div>

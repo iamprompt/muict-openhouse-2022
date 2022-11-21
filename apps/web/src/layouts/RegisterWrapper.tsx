@@ -16,16 +16,14 @@ const RegisterWrapper: FC<ComponentProps<'div'>> = () => {
           token: liff.getIDToken() ? liff.getIDToken() : undefined,
         }
       : null,
-    fetcher
+    fetcher,
   )
 
-  if (error) {
+  if (error)
     return <div>error</div>
-  }
 
-  if (!data) {
+  if (!data)
     return <LoadingWrapper />
-  }
 
   return <div></div>
 }

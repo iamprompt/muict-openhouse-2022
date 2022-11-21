@@ -18,24 +18,20 @@ const LocaleWrapper: FC<ComponentProps<'div'>> = ({ children }) => {
           token: liff.getIDToken() ? liff.getIDToken() : undefined,
         }
       : null,
-    fetcher
+    fetcher,
   )
 
-  if (!liff.isLoggedIn()) {
+  if (!liff.isLoggedIn())
     return <>{children}</>
-  }
 
-  if (error) {
+  if (error)
     return <div>error</div>
-  }
 
-  if (!isReady || !data) {
+  if (!isReady || !data)
     return <LoadingWrapper />
-  }
 
-  if (data.payload.language !== locale) {
+  if (data.payload.language !== locale)
     push({ pathname, query }, asPath, { locale: data.payload.language })
-  }
 
   return <>{children}</>
 }

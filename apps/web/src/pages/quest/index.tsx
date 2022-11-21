@@ -35,33 +35,30 @@ const Page: NextPage = () => {
           token: liff?.getIDToken?.() ? liff.getIDToken() : undefined,
         }
       : null,
-    fetcher
+    fetcher,
   )
 
   const questProgress = useMemo<Record<string, IQuestList>>(() => {
     return questLists.reduce((acc, { questNo, icon, title }) => {
-      if (!data) {
+      if (!data)
         return acc
-      }
 
       return {
         ...acc,
         [questNo]: {
           icon,
           title,
-          success: data.payload.quests.find((q) => q.questNo === questNo)?.status === QUEST_STATUS.SUCCESS_QUEST,
+          success: data.payload.quests.find(q => q.questNo === questNo)?.status === QUEST_STATUS.SUCCESS_QUEST,
         },
       }
     }, {})
   }, [data?.payload?.quests])
 
-  if (error) {
+  if (error)
     return <div>error</div>
-  }
 
-  if (!data) {
+  if (!data)
     return <LoadingWrapper />
-  }
 
   return (
     <Wrapper className="px-5 py-10">
@@ -80,7 +77,7 @@ const Page: NextPage = () => {
                 data.payload.isRewardClaimed
                   ? 'ACTIVITY_SUMMARY.REWARD_CLAIMED_BUTTON'
                   : 'ACTIVITY_SUMMARY.REWARD_BUTTON',
-                { ns: 'activity' }
+                { ns: 'activity' },
               )}
               variant={data.payload.isRewardClaimed ? 'primary' : 'ictTurquoise'}
               className="w-full disabled:cursor-not-allowed"

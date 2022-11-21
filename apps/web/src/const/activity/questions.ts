@@ -171,31 +171,31 @@ export const QUESTIONS: IQuestion<I18nTranslation>[] = [
         th: 'MU Blink Analyzer',
         en: 'MU Blink Analyzer',
       },
-      microusity: {
+      'microusity': {
         th: 'Microusity',
         en: 'Microusity',
       },
-      tpt: {
+      'tpt': {
         th: 'TPT',
         en: 'TPT',
       },
-      mosquito: {
+      'mosquito': {
         th: 'Mosquito',
         en: 'Mosquito',
       },
-      orchidator: {
+      'orchidator': {
         th: 'Orchidator',
         en: 'Orchidator',
       },
-      ezfit: {
+      'ezfit': {
         th: 'EzFIT',
         en: 'EzFIT',
       },
-      esit: {
+      'esit': {
         th: 'eSit',
         en: 'eSit',
       },
-      mirai: {
+      'mirai': {
         th: 'Mirai',
         en: 'Mirai',
       },
@@ -203,7 +203,7 @@ export const QUESTIONS: IQuestion<I18nTranslation>[] = [
         th: 'Suture Bot',
         en: 'Suture Bot',
       },
-      psimilan: {
+      'psimilan': {
         th: 'PSIMILAN',
         en: 'PSIMILAN',
       },
@@ -211,7 +211,7 @@ export const QUESTIONS: IQuestion<I18nTranslation>[] = [
         th: 'Receipt Recognizer',
         en: 'Receipt Recognizer',
       },
-      airadar: {
+      'airadar': {
         th: 'Airadar',
         en: 'Airadar',
       },
@@ -227,7 +227,7 @@ export const QUESTIONS: IQuestion<I18nTranslation>[] = [
         th: 'Food Spoilage',
         en: 'Food Spoilage',
       },
-      gaifa: {
+      'gaifa': {
         th: 'GAIFA',
         en: 'GAIFA',
       },
@@ -247,7 +247,7 @@ export const QUESTIONS: IQuestion<I18nTranslation>[] = [
         th: 'DALL-E',
         en: 'DALL-E',
       },
-      midjourney: {
+      'midjourney': {
         th: 'Midjourney',
         en: 'Midjourney',
       },
@@ -255,15 +255,15 @@ export const QUESTIONS: IQuestion<I18nTranslation>[] = [
         th: 'Stable Diffusion',
         en: 'Stable Diffusion',
       },
-      isit: {
+      'isit': {
         th: 'iSit',
         en: 'iSit',
       },
-      ocr: {
+      'ocr': {
         th: 'OCR',
         en: 'OCR',
       },
-      automl: {
+      'automl': {
         th: 'AutoML',
         en: 'AutoML',
       },
@@ -271,11 +271,11 @@ export const QUESTIONS: IQuestion<I18nTranslation>[] = [
         th: 'Smart Color',
         en: 'Smart Color',
       },
-      whitedefender: {
+      'whitedefender': {
         th: 'WhiteDefender',
         en: 'WhiteDefender',
       },
-      landsage: {
+      'landsage': {
         th: 'LandSage',
         en: 'LandSage',
       },
@@ -287,7 +287,7 @@ export const QUESTIONS: IQuestion<I18nTranslation>[] = [
         th: 'FixMe Bot',
         en: 'FixMe Bot',
       },
-      wabiqa: {
+      'wabiqa': {
         th: 'WabiQA',
         en: 'WabiQA',
       },

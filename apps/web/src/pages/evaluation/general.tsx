@@ -13,9 +13,9 @@ import Wrapper from '~/layouts/Wrapper'
 import { FormBuilder } from '~/modules/form/formBuilder'
 
 export const generalSchema = Joi.object().keys({
-  role: Joi.string().required(),
-  gender: Joi.string().required(),
-  channels: Joi.array().items(Joi.string()).required(),
+  'role': Joi.string().required(),
+  'gender': Joi.string().required(),
+  'channels': Joi.array().items(Joi.string()).required(),
   'participated-activities': Joi.array().items(Joi.string()).required(),
 })
 

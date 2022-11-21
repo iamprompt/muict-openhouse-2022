@@ -29,7 +29,7 @@ const Wrapper: FC<WrapperProps> = ({
       className={clsx(
         'min-h-screen w-full bg-cover bg-fixed bg-center bg-no-repeat',
         WrapperBgVariants[variant],
-        className
+        className,
       )}
       {...props}
     />

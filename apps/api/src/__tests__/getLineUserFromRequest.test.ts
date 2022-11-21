@@ -1,10 +1,9 @@
 import { Request } from 'express'
-import { mocked } from 'ts-jest/utils'
 import { getLineUserFromRequest } from '~/routes/users/helpers/getLineUserFromRequest'
 import axios from 'axios'
+import { jest } from '@jest/globals'
 
 jest.mock('axios')
-const mockedAxios = mocked(axios, true)
 
 /**
  * Test get line user from requets.
@@ -20,11 +19,11 @@ const mockedAxios = mocked(axios, true)
  */
 describe('getLineUserFromRequest', () => {
   afterEach(() => {
-    mockedAxios.mockClear()
+    // mockedAxios.mockClear()
   })
 
   it('should return line user', async () => {
-    mockedAxios.post.mockResolvedValue({
+    jest.mocked(axios).post.mockResolvedValue({
       data: {
         sub: 'U1234567890abcdef1234567890abcdef',
         name: 'John Doe',
@@ -50,7 +49,7 @@ describe('getLineUserFromRequest', () => {
   })
 
   it('should return null (invalid token)', async () => {
-    mockedAxios.post.mockRejectedValue({
+    jest.mocked(axios).post.mockResolvedValue({
       data: {
         error: 'invalid_request',
         error_description: 'Invalid IdToken.',

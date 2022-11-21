@@ -15,14 +15,16 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
   ({ name, label, required, className, error, ...props }, ref) => {
     return (
       <div>
-        {label ? (
+        {label
+          ? (
           <InputLabel
             htmlFor={name}
             label={label}
             className="mb-1 block"
             required={required}
           />
-        ) : null}
+            )
+          : null}
         <div className="relative">
           <BaseInput
             type="text"
@@ -33,15 +35,17 @@ const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             className={clsx('block', className)}
             {...props}
           />
-          {error ? (
+          {error
+            ? (
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-red-800">
               <Icon icon="op2022:error" />
             </div>
-          ) : null}
+              )
+            : null}
         </div>
       </div>
     )
-  }
+  },
 )
 
 TextInput.displayName = 'TextInput'

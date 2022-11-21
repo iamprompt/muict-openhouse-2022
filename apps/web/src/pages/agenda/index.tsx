@@ -29,7 +29,7 @@ const Page: NextPage = () => {
       <div className="mx-auto mb-10 flex max-w-sm items-center justify-center gap-5 font-heading">
         <div className="text-xl font-bold">Date:</div>
         <div className="flex grow gap-2">
-          {['2022-10-28', '2022-10-29'].map((date) => (
+          {['2022-10-28', '2022-10-29'].map(date => (
             <Button
               label={dayjs.tz(date).format('DD MMM')}
               key={date}
@@ -51,19 +51,23 @@ const Page: NextPage = () => {
               <div className="text-ictTurquoise font-heading text-sm">
                 {dayjs.tz(agenda.startAt).format('HH:mm')} - {dayjs.tz(agenda.endAt).format('HH:mm')}
               </div>
-              {agenda.isLive ? (
+              {agenda.isLive
+                ? (
                 <div className="text-ictTurquoise ml-2 flex items-center rounded-full bg-white/30 px-3 font-heading text-sm font-bold">
                   <div className="mr-2 h-2 w-2 rounded-full bg-red-600" /> LIVE
                 </div>
-              ) : null}
+                  )
+                : null}
             </div>
             <div className="font-heading text-lg font-bold">{agenda.title[locale]}</div>
-            {agenda.speakers?.length ? (
+            {agenda.speakers?.length
+              ? (
               <div className="mt-2">
                 <div className="text-sm">{agenda.speakers?.[0].name[locale]}</div>
                 <div className="text-xs">{agenda.speakers?.[0].position[locale]}</div>
               </div>
-            ) : null}
+                )
+              : null}
             <div className="mt-2">
               <Icon icon="op2022:location" inline className="inline" />{' '}
               <span className="font-heading text-sm">{agenda.location[locale]}</span>

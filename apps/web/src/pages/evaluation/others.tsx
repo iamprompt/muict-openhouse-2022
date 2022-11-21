@@ -1,4 +1,3 @@
-import axios from 'axios'
 import type { GetStaticProps, NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -66,14 +65,14 @@ const Page: NextPage = () => {
                   headers: {
                     authorization: liffIdToken ? `Bearer ${liffIdToken}` : undefined,
                   },
-                }
+                },
               )
 
               push('/evaluation/success')
             },
             (error) => {
               console.log(error)
-            }
+            },
           )}
         >
           <div className="rounded-xl sm:bg-white sm:p-16 sm:text-black">

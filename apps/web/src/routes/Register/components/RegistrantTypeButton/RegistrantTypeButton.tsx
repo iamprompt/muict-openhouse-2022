@@ -15,8 +15,8 @@ const RegistrantTypeButton: FC<RegistrantTypeButtonProps> = ({
   className,
   ...props
 }) => {
-  const variantClass =
-    variant === 'primary'
+  const variantClass
+    = variant === 'primary'
       ? 'bg-type-button-overlay-primary'
       : 'bg-type-button-overlay-secondary'
 
@@ -24,7 +24,7 @@ const RegistrantTypeButton: FC<RegistrantTypeButtonProps> = ({
     <div
       className={clsx(
         'relative flex h-48 flex-col items-center overflow-hidden rounded-xl bg-dst-prussian-blue font-heading shadow-md',
-        className
+        className,
       )}
       {...props}
     >
@@ -32,7 +32,7 @@ const RegistrantTypeButton: FC<RegistrantTypeButtonProps> = ({
         <div
           className={clsx(
             variantClass,
-            'flex h-36 w-full flex-grow items-center justify-center bg-dst-prussian-blue bg-size-double bg-center bg-no-repeat p-4 bg-blend-screen'
+            'flex h-36 w-full flex-grow items-center justify-center bg-dst-prussian-blue bg-size-double bg-center bg-no-repeat p-4 bg-blend-screen',
           )}
         >
           <img src={icon} alt={label} className="max-h-32 w-full" />

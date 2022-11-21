@@ -7,7 +7,7 @@ import ChoiceGroup from '~/routes/Activity/components/Input/ChoiceGroup'
 export const renderAnswerFromQuestion = (
   question: IQuestion,
   register: UseFormRegister<FieldValues>,
-  watch: UseFormWatch<FieldValues>
+  watch: UseFormWatch<FieldValues>,
 ) => {
   if (question.type === QUESTION_TYPE.MULTIPLE_CHOICE) {
     return (

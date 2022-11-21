@@ -1,4 +1,3 @@
-import axios from 'axios'
 import Joi from 'joi'
 import type { GetStaticProps, NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
@@ -86,25 +85,24 @@ const Page: NextPage = () => {
   })
 
   const provincesList = useMemo(() => {
-    const provinceSorted =
-      locale === 'th'
+    const provinceSorted
+      = locale === 'th'
         ? Provinces
         : Provinces.sort((a, b) => {
-            if (a.province_id === 1) {
-              return -1
-            }
+          if (a.province_id === 1)
+            return -1
 
-            return a.name.en.localeCompare(b.name.en)
-          })
+          return a.name.en.localeCompare(b.name.en)
+        })
 
-    return provinceSorted.map((p) => ({
+    return provinceSorted.map(p => ({
       value: `${p.province_id}`,
       label: p.name[locale as 'th' | 'en'],
     }))
   }, [])
 
   const educationList = useMemo(() => {
-    return EduLevels.map((e) => ({
+    return EduLevels.map(e => ({
       value: `${e.id}`,
       label: e.label[locale as 'th' | 'en'],
     }))
@@ -137,7 +135,7 @@ const Page: NextPage = () => {
                   headers: {
                     authorization: liffIdToken ? `Bearer ${liffIdToken}` : undefined,
                   },
-                }
+                },
               )
 
               dispatch('form/register/nextStep')
@@ -145,7 +143,7 @@ const Page: NextPage = () => {
             },
             (error) => {
               console.log(error)
-            }
+            },
           )}
         >
           <div className="rounded-xl sm:bg-white sm:p-16 sm:text-black">

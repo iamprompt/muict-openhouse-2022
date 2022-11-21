@@ -26,19 +26,18 @@ const Page = () => {
   >(
     isReady
       ? {
-          url: `stats/total`,
+          url: 'stats/total',
           method: 'GET',
         }
       : null,
     fetcher,
     {
       refreshInterval: 5000,
-    }
+    },
   )
 
-  if (!data) {
+  if (!data)
     return <LoadingWrapper />
-  }
 
   return (
     <Wrapper variant={BG_VARIANT_TYPES.SPACE} className="flex flex-col items-center justify-center p-10">

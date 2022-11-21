@@ -31,7 +31,7 @@ const TextAreaInput = forwardRef<HTMLTextAreaElement, TextAreaInputProps>(
         />
       </div>
     )
-  }
+  },
 )
 
 TextAreaInput.displayName = 'TextAreaInput'

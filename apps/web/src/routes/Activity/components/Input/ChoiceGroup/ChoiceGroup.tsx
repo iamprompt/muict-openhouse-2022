@@ -20,7 +20,7 @@ interface ChoiceGroupProps extends ComponentPropsWithoutRef<'div'> {
 const ChoiceGroup = forwardRef<HTMLDivElement, ChoiceGroupProps>(
   (
     { className, options, name, type = 'radio', register, watch, ...props },
-    ref
+    ref,
   ) => {
     return (
       <div
@@ -28,7 +28,7 @@ const ChoiceGroup = forwardRef<HTMLDivElement, ChoiceGroupProps>(
         className={clsx('flex flex-col gap-3', className)}
         {...props}
       >
-        {options.map((option) => (
+        {options.map(option => (
           <ChoiceInput
             type={type}
             key={option.label}
@@ -38,8 +38,8 @@ const ChoiceGroup = forwardRef<HTMLDivElement, ChoiceGroupProps>(
               type === 'radio'
                 ? watch(name) === option.value
                 : type === 'checkbox'
-                ? (watch(name) || []).includes(option.value)
-                : false
+                  ? (watch(name) || []).includes(option.value)
+                  : false
             }
             id={option.value as string}
             {...register(name)}
@@ -47,7 +47,7 @@ const ChoiceGroup = forwardRef<HTMLDivElement, ChoiceGroupProps>(
         ))}
       </div>
     )
-  }
+  },
 )
 
 ChoiceGroup.displayName = 'ChoiceGroup'

@@ -26,7 +26,7 @@ const Button: FC<ButtonProps> = ({
       className={clsx(
         'rounded-xl py-2 px-4 font-heading font-bold',
         ColorVariants[variant],
-        className
+        className,
       )}
     >
       {icon && iconPosition === 'left' && (

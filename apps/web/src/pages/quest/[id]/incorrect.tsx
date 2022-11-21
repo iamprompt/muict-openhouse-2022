@@ -30,16 +30,14 @@ const Page: NextPage = () => {
           url: `/quests/quest?questNo=${query.id}&lang=${locale}`,
         }
       : null,
-    fetcher
+    fetcher,
   )
 
-  if (error) {
+  if (error)
     return <div>failed to load</div>
-  }
 
-  if (!data || !isReady) {
+  if (!data || !isReady)
     return <LoadingWrapper />
-  }
 
   return (
     <Wrapper className="px-5 py-10">

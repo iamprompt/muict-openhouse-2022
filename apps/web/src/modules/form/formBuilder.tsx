@@ -20,7 +20,7 @@ interface FormBuilderProps {
 }
 
 export const FormBuilder: FC<FormBuilderProps> = ({ form, register, watch, errors, i18n }) => {
-  const t = i18n || ((key) => key)
+  const t = i18n || (key => key)
 
   return (
     <>
@@ -40,33 +40,40 @@ export const FormBuilder: FC<FormBuilderProps> = ({ form, register, watch, error
                       <label className="mb-3 block font-heading text-base font-bold">
                         {question.questionNo}. {t(question.question)}
                       </label>
-                      {question.questionType === QuestionType.Text ? (
+                      {question.questionType === QuestionType.Text
+                        ? (
                         <TextInput error={errors?.[question.key]?.message?.toString()} {...register(question.key)} />
-                      ) : question.questionType === QuestionType.Radio ? (
+                          )
+                        : question.questionType === QuestionType.Radio
+                          ? (
                         <ChoiceGroup
                           name={question.key}
-                          options={question.options.map((option) => ({
+                          options={question.options.map(option => ({
                             label: t(option.label),
                             value: option.value,
                           }))}
                           register={register}
                           watch={watch}
                         />
-                      ) : question.questionType === QuestionType.Checkbox ? (
+                            )
+                          : question.questionType === QuestionType.Checkbox
+                            ? (
                         <ChoiceGroup
                           type="checkbox"
                           name={question.key}
-                          options={question.options.map((option) => ({
+                          options={question.options.map(option => ({
                             label: t(option.label),
                             value: option.value,
                           }))}
                           register={register}
                           watch={watch}
                         />
-                      ) : question.questionType === QuestionType.MultipleText ? (
+                              )
+                            : question.questionType === QuestionType.MultipleText
+                              ? (
                         <div className="space-y-3">
-                          {question.quantity &&
-                            Array.from(Array(question.quantity)).map((_, i) => {
+                          {question.quantity
+                            && Array.from(Array(question.quantity)).map((_, i) => {
                               return (
                                 <div key={`${question.key}.${i}`}>
                                   {question.subAnswersTitle && (
@@ -79,9 +86,12 @@ export const FormBuilder: FC<FormBuilderProps> = ({ form, register, watch, error
                               )
                             })}
                         </div>
-                      ) : question.questionType === QuestionType.TextArea ? (
+                                )
+                              : question.questionType === QuestionType.TextArea
+                                ? (
                         <TextAreaInput className="w-full" {...register(question.key)} />
-                      ) : null}
+                                  )
+                                : null}
                     </div>
                   )
                 })}

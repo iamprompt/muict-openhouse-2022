@@ -17,4 +17,4 @@ export const fetcher = ({ method, url, token, data }: FetcherProps) =>
     headers: {
       Authorization: token ? `Bearer ${token}` : undefined,
     },
-  }).then((res) => res.data)
+  }).then(res => res.data)

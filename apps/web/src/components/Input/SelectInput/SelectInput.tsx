@@ -34,13 +34,13 @@ const SelectInput = forwardRef<HTMLSelectElement, SelectInputProps>(
           required={required}
           className={clsx(
             'appearance-none rounded-xl border border-gray-200 py-2 px-3 text-black outline-none placeholder:text-gray-300',
-            className
+            className,
           )}
           {...props}
         >
           {options.map((option) => {
-            const optionObj =
-              typeof option === 'string'
+            const optionObj
+              = typeof option === 'string'
                 ? { label: option, value: option }
                 : option
 
@@ -53,7 +53,7 @@ const SelectInput = forwardRef<HTMLSelectElement, SelectInputProps>(
         </select>
       </div>
     )
-  }
+  },
 )
 
 SelectInput.displayName = 'SelectInput'

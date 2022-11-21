@@ -24,7 +24,7 @@ const iconType = {
 const ChoiceInput = forwardRef<HTMLInputElement, ChoiceInputProps>(
   (
     { className, selected = false, label, id, type = 'radio', name, ...props },
-    ref
+    ref,
   ) => {
     return (
       <div>
@@ -41,7 +41,7 @@ const ChoiceInput = forwardRef<HTMLInputElement, ChoiceInputProps>(
             'border-gray-150 flex cursor-pointer items-center gap-3 rounded-xl border py-3 px-4',
             selected
               ? 'bg-white text-black sm:bg-gray-800 sm:text-white'
-              : 'bg-transparent text-white sm:text-black'
+              : 'bg-transparent text-white sm:text-black',
           )}
           htmlFor={`${name}.${id}`}
         >
@@ -49,14 +49,14 @@ const ChoiceInput = forwardRef<HTMLInputElement, ChoiceInputProps>(
             icon={iconType[type][selected ? 'checked' : 'unchecked']}
             className={clsx(
               'h-6 w-6 shrink-0',
-              selected && 'text-ict-turquoise'
+              selected && 'text-ict-turquoise',
             )}
           />
           <span>{label}</span>
         </label>
       </div>
     )
-  }
+  },
 )
 
 ChoiceInput.displayName = 'RadioInput'

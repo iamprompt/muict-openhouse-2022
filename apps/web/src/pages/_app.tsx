@@ -35,13 +35,15 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Context>
         {/* LIFF Wrapper */}
         <LIFFWrapper>
-          {['/quest', '/quest/[id]', '/evaluation', '/agenda'].includes(pathname) ? (
+          {['/quest', '/quest/[id]', '/evaluation', '/agenda'].includes(pathname)
+            ? (
             <LocaleWrapper>
               <Component {...pageProps} />
             </LocaleWrapper>
-          ) : (
+              )
+            : (
             <Component {...pageProps} />
-          )}
+              )}
         </LIFFWrapper>
       </Context>
     </>

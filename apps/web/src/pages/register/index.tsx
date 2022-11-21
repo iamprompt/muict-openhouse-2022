@@ -30,20 +30,17 @@ const Page = () => {
           token: liff.getIDToken() ? liff.getIDToken() : undefined,
         }
       : null,
-    fetcher
+    fetcher,
   )
 
-  if (error) {
+  if (error)
     return <div>failed to load</div>
-  }
 
-  if (!data) {
+  if (!data)
     return <LoadingWrapper />
-  }
 
-  if (data.payload.isRegistered) {
+  if (data.payload.isRegistered)
     push('/register/registered')
-  }
 
   return (
     <Wrapper variant={BG_VARIANT_TYPES.LANDING}>

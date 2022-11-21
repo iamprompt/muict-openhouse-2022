@@ -76,7 +76,7 @@ const EduLevels: EduLevel[] = [
     id: 9,
     label: {
       th: 'อนุปริญญา',
-      en: "Associate's Degree",
+      en: 'Associate\'s Degree',
     },
     value: 'associates-degree',
   },
@@ -84,7 +84,7 @@ const EduLevels: EduLevel[] = [
     id: 10,
     label: {
       th: 'ปริญญาตรี',
-      en: "Bachelor's Degree",
+      en: 'Bachelor\'s Degree',
     },
     value: 'bachelors-degree',
   },
@@ -92,7 +92,7 @@ const EduLevels: EduLevel[] = [
     id: 11,
     label: {
       th: 'ปริญญาโท',
-      en: "Master's Degree",
+      en: 'Master\'s Degree',
     },
     value: 'masters-degree',
   },

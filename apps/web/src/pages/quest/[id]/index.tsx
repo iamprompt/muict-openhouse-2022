@@ -1,4 +1,3 @@
-import axios from 'axios'
 import type { GetServerSideProps, NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -39,7 +38,7 @@ const Page: NextPage = () => {
           token: liff?.getIDToken?.() ? liff.getIDToken() : undefined,
         }
       : null,
-    fetcher
+    fetcher,
   )
 
   const { data: questData } = useSWR<ApiResponseSuccess<IQuestion>, ApiResponseError>(
@@ -49,7 +48,7 @@ const Page: NextPage = () => {
           url: `/quests/quest?questNo=${query.id}&lang=${locale}`,
         }
       : null,
-    fetcher
+    fetcher,
   )
 
   useEffect(() => {
@@ -59,17 +58,14 @@ const Page: NextPage = () => {
     }
   }, [data?.payload])
 
-  if (error) {
+  if (error)
     return <div>failed to load</div>
-  }
 
-  if (!data || !questData || !isReady) {
+  if (!data || !questData || !isReady)
     return <LoadingWrapper />
-  }
 
-  if (data.payload.status === QUEST_STATUS.SUCCESS_QUEST) {
+  if (data.payload.status === QUEST_STATUS.SUCCESS_QUEST)
     push(`/quest/${query.id}/done`)
-  }
 
   return (
     <Wrapper className="px-5 py-10">
@@ -100,7 +96,8 @@ const Page: NextPage = () => {
                     ...query,
                   },
                 })
-              } else {
+              }
+              else {
                 push({
                   pathname: '/quest/[id]/incorrect',
                   query: {

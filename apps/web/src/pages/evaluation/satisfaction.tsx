@@ -59,7 +59,7 @@ const Page: NextPage = () => {
             },
             (error) => {
               console.log(error)
-            }
+            },
           )}
         >
           <div className="rounded-xl sm:bg-white sm:p-16 sm:text-black">

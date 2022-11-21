@@ -201,7 +201,7 @@ export const AGENDA: Record<string, IEventItem[]> = {
     {
       title: {
         th: 'การศึกษาต่อในประเทศอังกฤษ และอเมริกา (MIT) โดย พี่ยุ้ย ศิษย์เก่า',
-        en: "Study in UK and Study at MIT, USA by P'Yui ICT Alumni",
+        en: 'Study in UK and Study at MIT, USA by P\'Yui ICT Alumni',
       },
       startAt: new Date('2022-10-29T09:00:00+07:00'),
       endAt: new Date('2022-10-29T10:00:00+07:00'),
