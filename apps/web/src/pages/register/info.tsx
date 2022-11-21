@@ -52,7 +52,7 @@ const Page: NextPage = () => {
     <Wrapper>
       <div className="mx-auto flex min-h-screen max-w-screen-md flex-col px-8 py-10 sm:justify-center">
         <form
-          data-cy="basic-info-form"
+          data-test="basic-info-form"
           onSubmit={handleSubmit(
             (data) => {
               dispatch('form/register/setFields', {
@@ -81,7 +81,7 @@ const Page: NextPage = () => {
             <div className="w-full space-y-5">
               <TextInput
                 id="firstName"
-                data-cy="first-name-input"
+                data-test="first-name-input"
                 label={t('REG_FORM.REG_FIELD_FIRSTNAME')}
                 placeholder={t('REG_FORM.REG_FIELD_FIRSTNAME_PLACEHOLDER')}
                 required
@@ -91,7 +91,7 @@ const Page: NextPage = () => {
               />
               <TextInput
                 id="lastName"
-                data-cy="last-name-input"
+                data-test="last-name-input"
                 label={t('REG_FORM.REG_FIELD_LASTNAME')}
                 placeholder={t('REG_FORM.REG_FIELD_LASTNAME_PLACEHOLDER')}
                 error={errors.lastName?.message}
@@ -111,7 +111,7 @@ const Page: NextPage = () => {
               /> */}
               <TextInput
                 id="email"
-                data-cy="email-input"
+                data-test="email-input"
                 label={t('REG_FORM.REG_FIELD_EMAIL')}
                 placeholder={t('REG_FORM.REG_FIELD_EMAIL_PLACEHOLDER')}
                 error={errors.email?.message}
@@ -121,7 +121,7 @@ const Page: NextPage = () => {
               />
               <TextInput
                 id="phone"
-                data-cy="phone-input"
+                data-test="phone-input"
                 label={t('REG_FORM.REG_FIELD_PHONE')}
                 placeholder={t('REG_FORM.REG_FIELD_PHONE_PLACEHOLDER')}
                 error={errors.phone?.message}

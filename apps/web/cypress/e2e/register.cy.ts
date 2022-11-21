@@ -33,26 +33,26 @@ describe('Register', () => {
     })
 
     // Select Language
-    cy.get('[data-cy=nationality-th]').click()
+    cy.get('[data-test=nationality-th]').click()
 
     // Participant Type Selection
-    cy.get('[data-cy=registrant-type-student]').click()
+    cy.get('[data-test=registrant-type-student]').click()
 
     // Privacy Policy
-    cy.get('[data-cy=policy-agreement]').check()
-    cy.get('[data-cy=policy-form]').submit()
+    cy.get('[data-test=policy-agreement]').check()
+    cy.get('[data-test=policy-form]').submit()
 
     // Basic Information
-    cy.get('[data-cy=first-name-input]').type('Tom')
-    cy.get('[data-cy=last-name-input]').type('Cruise')
-    cy.get('[data-cy=email-input]').type('tom.cruise@gmail.com')
-    cy.get('[data-cy=phone-input]').type('0812345678')
-    cy.get('[data-cy=basic-info-form]').submit()
+    cy.get('[data-test=first-name-input]').type('Tom')
+    cy.get('[data-test=last-name-input]').type('Cruise')
+    cy.get('[data-test=email-input]').type('tom.cruise@gmail.com')
+    cy.get('[data-test=phone-input]').type('0812345678')
+    cy.get('[data-test=basic-info-form]').submit()
 
     // Additional Information
-    cy.get('[data-cy=province-select]').select('กรุงเทพมหานคร')
-    cy.get('[data-cy=school-input]').type('Mahidol University')
-    cy.get('[data-cy=level-select]').select('ปริญญาตรี')
+    cy.get('[data-test=province-select]').select('กรุงเทพมหานคร')
+    cy.get('[data-test=school-input]').type('Mahidol University')
+    cy.get('[data-test=level-select]').select('ปริญญาตรี')
 
     // Submit Form
     cy.intercept('POST', '/api/users/register', {
@@ -61,7 +61,7 @@ describe('Register', () => {
         message: 'Participant registered',
       },
     })
-    cy.get('[data-cy=additional-info-form]').submit()
+    cy.get('[data-test=additional-info-form]').submit()
 
     // Expect to be redirected to success page
     cy.url().should('include', '/register/success')

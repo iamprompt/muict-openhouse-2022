@@ -83,7 +83,7 @@ const THPolicy: FC<PolicyProps> = ({ register }) => {
               type="checkbox"
               className="mr-2"
               id="policyAgreement"
-              data-cy="policy-agreement"
+              data-test="policy-agreement"
               {...register('policyAgreement')}
             />
             <label htmlFor="policyAgreement">
@@ -164,7 +164,7 @@ const ENPolicy: FC<PolicyProps> = ({ register }) => {
               type="checkbox"
               className="mr-2"
               id="policyAgreement"
-              data-cy="policy-agreement"
+              data-test="policy-agreement"
               {...register('policyAgreement')}
             />
             <label htmlFor="policyAgreement">
@@ -207,7 +207,7 @@ const Page: NextPage = () => {
     <Wrapper>
       <div className="mx-auto flex min-h-screen max-w-screen-md flex-col px-8 py-10 sm:justify-center">
         <form
-          data-cy="policy-form"
+          data-test="policy-form"
           onSubmit={handleSubmit((data) => {
             dispatch('form/register/setFields', data)
             dispatch('form/register/nextStep')
