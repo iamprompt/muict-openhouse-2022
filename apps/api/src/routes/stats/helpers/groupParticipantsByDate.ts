@@ -5,6 +5,10 @@ import { getParticipants } from './getParticipants'
 export const groupParticipantsByDate = (participants: Awaited<ReturnType<typeof getParticipants>>) => {
   return participants.reduce((acc, participant) => {
     const { createdAt } = participant
+
+    console.log(createdAt)
+    console.log(dayjs(createdAt).format('YYYY-MM-DD'))
+
     const dateFormatted = dayjs.tz(createdAt).format('YYYY-MM-DD')
 
     if (!acc[dateFormatted]) {
