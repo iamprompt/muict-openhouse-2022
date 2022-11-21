@@ -23,7 +23,7 @@ ARG NEXT_PUBLIC_API_BASE_URL
 ENV NEXT_PUBLIC_API_BASE_URL=$NEXT_PUBLIC_API_BASE_URL
 
 RUN turbo run build --filter=web
-RUN pnpm prune --prod
+# RUN pnpm prune --prod
 
 FROM nodebase AS runner
 WORKDIR /app

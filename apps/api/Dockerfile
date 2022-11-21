@@ -18,7 +18,7 @@ RUN pnpm install --frozen-lockfile
 COPY --from=builder /app/out/full/ ./
 COPY turbo.json turbo.json
 RUN turbo run build --filter=api
-RUN pnpm prune --prod
+# RUN pnpm prune --prod
 
 FROM nodebase AS runner
 WORKDIR /app
