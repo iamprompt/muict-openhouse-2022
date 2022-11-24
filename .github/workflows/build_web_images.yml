@@ -1,4 +1,4 @@
-name: Create and publish a Web Docker image
+name: Web Docker Image Build
 
 on:
   push:

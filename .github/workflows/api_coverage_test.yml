@@ -1,4 +1,4 @@
-name: Generate API test coverage report
+name: API Coverage Testing
 
 on:
   push:

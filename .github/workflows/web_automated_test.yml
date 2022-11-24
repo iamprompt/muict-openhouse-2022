@@ -1,4 +1,4 @@
-name: Test Web
+name: UI Automated Testing
 
 on:
   push:

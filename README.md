@@ -2,11 +2,17 @@
 
 This is an official pnpm starter turborepo.
 
+[![UI Automated Testing](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/web_automated_test.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/web_automated_test.yml)
+[![API Coverage Testing](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/api_coverage_test.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/api_coverage_test.yml)
+
 ![Branches](./badges/coverage-branches.svg)
 ![Functions](./badges/coverage-functions.svg)
 ![Lines](./badges/coverage-lines.svg)
 ![Statements](./badges/coverage-statements.svg)
 ![Jest coverage](./badges/coverage-jest%20coverage.svg)
+
+[![Web Docker Image Build](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_web_images.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_web_images.yml)
+[![API Docker Image Build](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_api_images.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_api_images.yml)
 
 ## What's inside?
 
