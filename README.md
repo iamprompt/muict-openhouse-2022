@@ -2,6 +2,12 @@
 
 This is an official pnpm starter turborepo.
 
+![Branches](./badges/coverage-branches.svg)
+![Functions](./badges/coverage-functions.svg)
+![Lines](./badges/coverage-lines.svg)
+![Statements](./badges/coverage-statements.svg)
+![Jest coverage](./badges/coverage-jest%20coverage.svg)
+
 ## What's inside?
 
 This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:

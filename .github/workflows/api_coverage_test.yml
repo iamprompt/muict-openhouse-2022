@@ -60,3 +60,8 @@ jobs:
           coverage-file: ./apps/api/coverage-report.json
           base-coverage-file: ./apps/api/coverage-report.json
           output: comment, report-markdown
+
+      - name: Generating Jest Coverage Badges
+        uses: jpb06/jest-badges-action@latest
+        with:
+          coverage-summary-path: ./apps/api/coverage/coverage-summary.json
