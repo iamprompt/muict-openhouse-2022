@@ -31,6 +31,7 @@ const Page: NextPage = () => {
         <div className="flex grow gap-2">
           {['2022-10-28', '2022-10-29'].map(date => (
             <Button
+              data-test={`agenda-date-${date}`}
               label={dayjs.tz(date).format('DD MMM')}
               key={date}
               variant={selectedDate === date ? 'ictTurquoise' : 'primary'}
@@ -48,29 +49,29 @@ const Page: NextPage = () => {
             className={clsx('rounded-xl p-5', i % 2 === 0 ? 'bg-[#003366]/60' : 'bg-[#567A9E]/60')}
           >
             <div className="mb-1 flex items-center">
-              <div className="text-ictTurquoise font-heading text-sm">
+              <div className="text-ictTurquoise font-heading text-sm" data-test={`agenda-${selectedDate}-${i}-time`}>
                 {dayjs.tz(agenda.startAt).format('HH:mm')} - {dayjs.tz(agenda.endAt).format('HH:mm')}
               </div>
               {agenda.isLive
                 ? (
-                <div className="text-ictTurquoise ml-2 flex items-center rounded-full bg-white/30 px-3 font-heading text-sm font-bold">
+                <div className="text-ictTurquoise ml-2 flex items-center rounded-full bg-white/30 px-3 font-heading text-sm font-bold" data-test={`agenda-${selectedDate}-${i}-live`}>
                   <div className="mr-2 h-2 w-2 rounded-full bg-red-600" /> LIVE
                 </div>
                   )
                 : null}
             </div>
-            <div className="font-heading text-lg font-bold">{agenda.title[locale]}</div>
+            <div className="font-heading text-lg font-bold" data-test={`agenda-${selectedDate}-${i}-title`}>{agenda.title[locale]}</div>
             {agenda.speakers?.length
               ? (
               <div className="mt-2">
-                <div className="text-sm">{agenda.speakers?.[0].name[locale]}</div>
-                <div className="text-xs">{agenda.speakers?.[0].position[locale]}</div>
+                <div className="text-sm" data-test={`agenda-${selectedDate}-${i}-speaker-name`}>{agenda.speakers?.[0].name[locale]}</div>
+                <div className="text-xs" data-test={`agenda-${selectedDate}-${i}-speaker-position`}>{agenda.speakers?.[0].position[locale]}</div>
               </div>
                 )
               : null}
             <div className="mt-2">
               <Icon icon="op2022:location" inline className="inline" />{' '}
-              <span className="font-heading text-sm">{agenda.location[locale]}</span>
+              <span className="font-heading text-sm" data-test={`agenda-${selectedDate}-${i}-location`}>{agenda.location[locale]}</span>
             </div>
           </div>
         ))}

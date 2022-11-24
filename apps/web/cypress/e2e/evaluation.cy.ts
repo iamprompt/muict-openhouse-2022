@@ -1,4 +1,4 @@
-describe('Register', () => {
+describe('Evaluation', () => {
   beforeEach(() => {
     cy.viewport(430, 932)
   })
