@@ -43,16 +43,16 @@ describe('Register', () => {
     cy.get('[data-test=policy-form]').submit()
 
     // Basic Information
-    cy.get('[data-test=first-name-input]').type('Tom')
-    cy.get('[data-test=last-name-input]').type('Cruise')
-    cy.get('[data-test=email-input]').type('tom.cruise@gmail.com')
-    cy.get('[data-test=phone-input]').type('0812345678')
+    cy.get('[data-test=first-name-input]').type('นพรัตน์')
+    cy.get('[data-test=last-name-input]').type('เพ็งสุข')
+    cy.get('[data-test=email-input]').type('nopparat.pen@gmail.com')
+    cy.get('[data-test=phone-input]').type('0979244717')
     cy.get('[data-test=basic-info-form]').submit()
 
     // Additional Information
     cy.get('[data-test=province-select]').select('กรุงเทพมหานคร')
-    cy.get('[data-test=school-input]').type('Mahidol University')
-    cy.get('[data-test=level-select]').select('ปริญญาตรี')
+    cy.get('[data-test=school-input]').type('โรงเรียนอัสสัมชัญธนบุรี')
+    cy.get('[data-test=level-select]').select('มัธยมศึกษาปีที่ 6')
 
     // Submit Form
     cy.intercept('POST', '/api/users/register', {
