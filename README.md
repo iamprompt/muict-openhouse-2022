@@ -30,5 +30,5 @@ This project is a web application created for activities in MUICT Open House 202
 
 This project also includes automated testing for the web application and the API. The web application is tested using [Cypress](https://www.cypress.io/) and the API is tested using [Jest](https://jestjs.io/).
 
-- [`web`](./apps/web/cypress/e2e/): Automated testing for the web application.
-- [`api`](./apps/api/src/__tests__/): Automated testing for the API.
+- [`web`](./apps/web/cypress/e2e/): Automated testing for the web application, located in the `apps/web/cypress/e2e` directory.
+- [`api`](./apps/api/src/__tests__/): Automated testing for the API, located in the `apps/api/src/__tests__` directory.
