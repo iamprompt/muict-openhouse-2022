@@ -14,68 +14,21 @@ This project is a web application created for activities in MUICT Open House 202
 [![Web Docker Image Build](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_web_images.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_web_images.yml)
 [![API Docker Image Build](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_api_images.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_api_images.yml)
 
-## Apps and Packages
+## Tech Stack
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- [Next.js](https://nextjs.org/)
+- [Express.js](https://expressjs.com/)
+- [Node.js](https://nodejs.org/en/)
+- [MongoDB](https://www.mongodb.com/)
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## Project Structures
 
-### Utilities
+- [`api`](./apps/api/): An [Express.js](https://expressjs.com/) application that serves as the backend API for the web application.
+- [`web`](./apps/web/): A [Next.js](https://nextjs.org/) application that serves as the frontend for the web application.
 
-This turborepo has some additional tools already setup for you:
+## Testing
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+This project also includes automated testing for the web application and the API. The web application is tested using [Cypress](https://www.cypress.io/) and the API is tested using [Jest](https://jestjs.io/).
 
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-pnpm dlx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-pnpm dlx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [`web`](./apps/web/cypress/e2e/): Automated testing for the web application.
+- [`api`](./apps/api/src/__tests__/): Automated testing for the API.
