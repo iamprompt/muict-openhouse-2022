@@ -14,6 +14,8 @@ This project is a web application created for activities in MUICT Open House 202
 [![Web Docker Image Build](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_web_images.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_web_images.yml)
 [![API Docker Image Build](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_api_images.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_api_images.yml)
 
+![MUICT Open House 2022 Activity LINE LIFF Application](./docs/images/cover.jpg)
+
 ## Tech Stack
 
 - [Next.js](https://nextjs.org/)
