@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["next", "custom"],
+  "extends": ["next"],
   "rules": {
     "@next/next/no-img-element": "off",
     "react-hooks/exhaustive-deps": "off",

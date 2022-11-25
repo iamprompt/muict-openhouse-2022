@@ -1,6 +1,6 @@
-# Turborepo starter
+# MUICT Open House 2022 Activity LINE LIFF Application
 
-This is an official pnpm starter turborepo.
+This project is a web application created for activities in MUICT Open House 2022. This web application is mainly implemented using [LINE Front-end Framework (LIFF)](https://developers.line.biz/en/docs/liff/overview/).
 
 [![UI Automated Testing](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/web_automated_test.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/web_automated_test.yml)
 [![API Coverage Testing](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/api_coverage_test.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/api_coverage_test.yml)
@@ -14,11 +14,7 @@ This is an official pnpm starter turborepo.
 [![Web Docker Image Build](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_web_images.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_web_images.yml)
 [![API Docker Image Build](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_api_images.yml/badge.svg?branch=main)](https://github.com/iamprompt/muict-openhouse-2022/actions/workflows/build_api_images.yml)
 
-## What's inside?
-
-This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
-
-### Apps and Packages
+## Apps and Packages
 
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
